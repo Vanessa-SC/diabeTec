@@ -1,9 +1,77 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
+  <ion-toolbar color="rose">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="rose">
+  <div style="text-align: center; padding-left: 2%; padding-right: 2%; padding-top: 5%;">
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <ion-icon name="person"></ion-icon>
+      <div style="padding-left: 5%;">
+        <ion-input type="text" [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
+      </div>
+    </ion-item>
+
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <ion-icon name="phone-portrait"></ion-icon>
+      <div style="padding-left: 5%;">
+        <ion-input type="nomber" [(ngModel)]="telefono" placeholder="Telefono"></ion-input>
+      </div>
+    </ion-item>
+
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <ion-icon name="mail"></ion-icon>
+      <div style="padding-left: 5%;">
+        <ion-input type="text" [(ngModel)]="correo" placeholder="Correo Electronico"></ion-input>
+      </div>
+    </ion-item>
+
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <ion-icon name="lock"></ion-icon>
+      <div style="padding-left: 5%;">
+        <ion-input type="password" [(ngModel)]="contra" placeholder="Contraseña"></ion-input>
+      </div>
+    </ion-item>
+
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <ion-icon name="lock"></ion-icon>
+      <div style="padding-left: 5%;">
+        <ion-input type="password" [(ngModel)]="repiteContra" placeholder="Repite tu contraseña"></ion-input>
+      </div>
+    </ion-item>
+    <ion-item color="rose" style="padding-top: 2%;">
+        <ion-label>Sexo</ion-label>
+        <ion-select>
+          <ion-select-option value="Femenino">Femenino</ion-select-option>
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Sin especificar">Otro</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item color="rose" style="padding-top: 2%;">
+      <ion-label>Tipo de diabetes</ion-label>
+        <ion-select>
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item color="rose" style="padding-top: 2%;">
+        <ion-label>Fecha de Nacimiento</ion-label>
+        <ion-datetime display-format="DD MMMM, YYYY"
+          month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+          day-short-names="dom,lun,mar,mier,jue,vie,sab">
+        </ion-datetime>
+    </ion-item>
+
+    <div color="rose" style="padding-top: 5%; padding-bottom: 5%;">
+      <ion-checkbox [(ngModel)]="terminosCheck" style="margin-top: 3%; padding-top:2px;" color="dark"></ion-checkbox>
+      <ion-label>Acepto los terminos y condiciones</ion-label>
+    </div>
+    <ion-button expand="full" shape="round" color="dark">Registrar</ion-button>
+
+  </div>
 
 </ion-content>
