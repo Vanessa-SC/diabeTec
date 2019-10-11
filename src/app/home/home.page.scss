@@ -8,3 +8,51 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
+.logo {
+  text-align: center;
+  width: 65%;
+}
+.center {
+  text-align: center
+}
+.left {
+  text-align: left
+}
+.right {
+  text-align: right
+}
+.padding-left {
+  padding-left: 10px;
+}
+.padding-right {
+  padding-right: 10px; 
+}
+.padding {
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+.padding-top-10 {
+  padding-top: 10px;
+}
+.padding-top-30 {
+  padding-top: 30px;
+}
+.bold {
+  font-weight: 550
+}
+.light {
+  font-weight: 300
+}
+.fontt {
+  font-size: 20px;
+}
+.fontv {
+  font-size: 12px;
+}
+.fontl {
+  font-size: 14px;
+}
+.new-background-color{
+  --background: #A6ACAF;
+  --background-hover: #A6ACAF;
+}
