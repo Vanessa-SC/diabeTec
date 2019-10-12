@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inicio',
@@ -8,11 +10,17 @@ import { Router } from '@angular/router';
 })
 export class InicioPage implements OnInit {
 
-  constructor(public route:Router) { }
+  constructor(private menu: MenuController, public route:Router, public activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  openFirst() {
+    console.log("click OpenFirst");
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
+  }
+  
   irA(vinculo:string){
     console.log(vinculo);
 

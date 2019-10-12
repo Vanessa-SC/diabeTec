@@ -2,7 +2,9 @@
 *{
     color: rgb(199, 28, 57);
 }
-
+.white {
+  color: #FFFCF2
+}
 .gota {
     display: block;
     margin: auto;
@@ -87,4 +89,7 @@
 .new-background-color{
   --background: #A6ACAF;
   --background-hover: #A6ACAF;
+}
+.new-background{
+  --background: rgb(199, 28, 57);
 }

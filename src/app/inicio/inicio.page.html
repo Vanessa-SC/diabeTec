@@ -1,7 +1,7 @@
 <ion-menu side="start" menuId="first" style="background: rgb(199, 28, 57);">
   <ion-header>
-    <ion-toolbar color="rose">
-      <ion-title>DiabeTec</ion-title>
+    <ion-toolbar class="new-background">
+      <ion-title class="white">DiabeTec</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
@@ -69,13 +69,13 @@
 </ion-menu>
 
 <ion-header>
-  <ion-toolbar color="rose">
+  <ion-toolbar class="new-background">
     <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon name="menu"></ion-icon>
+      <ion-button (click)="openFirst()">
+        <ion-icon name="menu" class="white"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title  class="white">
       Inicio
     </ion-title>
   </ion-toolbar>
