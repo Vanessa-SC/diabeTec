@@ -45,7 +45,7 @@
     </ion-item>
     <ion-item color="rose" style="padding-top: 2%;">
         <ion-label class="bold"> ♂♀  Sexo</ion-label>
-        <ion-select>
+        <ion-select [(ngModel)]="genero">
           <ion-select-option value="Femenino">Femenino</ion-select-option>
           <ion-select-option value="Masculino">Masculino</ion-select-option>
           <ion-select-option value="Sin especificar">Otro</ion-select-option>
@@ -53,7 +53,7 @@
     </ion-item>
     <ion-item color="rose" style="padding-top: 2%;">
       <ion-label class="bold">  •   Tipo de diabetes</ion-label>
-        <ion-select>
+        <ion-select [(ngModel)]="tipoDiabetes">
           <ion-select-option value="1">Tipo 1</ion-select-option>
           <ion-select-option value="2">Tipo 2</ion-select-option>
           <ion-select-option value="3">Gestacional</ion-select-option>
@@ -63,7 +63,7 @@
       <ion-item color="rose" style="padding-top: 2%;">
         <ion-icon name="calendar"></ion-icon>
         <ion-label class="bold">   Fecha de Nacimiento</ion-label>
-        <ion-datetime display-format="DD MMMM, YYYY"
+        <ion-datetime [(ngModel)]="fechaNac" display-format="DD MMMM, YYYY"
           month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
           day-short-names="dom,lun,mar,mier,jue,vie,sab">
         </ion-datetime>

@@ -1,0 +1,121 @@
+<ion-menu side="start" menuId="first" style="background: rgb(199, 28, 57);">
+  <ion-header>
+    <ion-toolbar color="rose">
+      <ion-title>DiabeTec</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="irA('/inicio')">
+        <ion-icon color="rose" name="home"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning"> Inicio</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/perfil')">
+        <ion-icon color="rose" name="person"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Perfil</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/medicamentos')">
+        <ion-icon color="rose" name="medkit"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Medicamentos</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/menus')">
+        <ion-icon color="rose" name="cafe"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Menú de alimentos</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/presion')">
+        <ion-icon color="rose" name="heart"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Presión arterial</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/peso')">
+        <ion-icon color="rose" name="cube"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Peso</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/recordatorios')">
+        <ion-icon color="rose" name="alarm"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Recordatorios</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/ajustes')">
+        <ion-icon color="rose" name="settings"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Ajustes</h6>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar color="rose">
+      <ion-item color="rose" (click)="irA('/home')">
+        <ion-icon color="light" name="power"></ion-icon>
+        <div style="margin-left: 4%;">
+          <h6 color="warning">Cerrar Sesion</h6>
+        </div>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar color="rose">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-router-outlet main>
+
+  <ion-content>
+    <div class="ion-padding">
+      <div class="center">
+        <div class="left bold padding-top-70 blackText">Hoy</div>
+        <div class="center padding-top-10" (click)="irA('/agregar')">
+          <img src="assets/add.png" class="gota circle">
+        </div>
+        <div class="blackText">Añadir medición de glucosa</div>
+
+        <div class="padding padding-top-10">
+          <div class="blackText bold">0 mg/dL</div>
+          <ion-label> Glucosa promedio</ion-label>
+        </div>
+        <div>
+            <div class="blackText bold">0 mg/dL</div>
+            <ion-label> Última lectura </ion-label>
+        </div> 
+        <div class="menuItem" (click)="irA('/bitacora')">
+          <img class="logoMenu" src="assets/forma.png">
+          <ion-label class="blackText">Mi bitácora</ion-label>
+        </div>
+        <div class="menuItem" (click)="irA('/noticias')">
+            <img class="logoMenu" src="assets/noticias.png">
+            <ion-label class="blackText">Noticias</ion-label>
+        </div>
+        <div class="menuItem" (click)="irA('/graficas')">
+            <img class="logoMenu" src="assets/graficas.png">
+            <ion-label class="blackText">Gráficas</ion-label>
+        </div>
+        <div class="menuItem" (click)="irA('/ejercicios')">
+            <img class="logoMenu" src="assets/ejercicio.png">
+            <ion-label class="blackText">Ejercicios</ion-label>
+        </div>
+      </div>
+    </div>
+  </ion-content>
