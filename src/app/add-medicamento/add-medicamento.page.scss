@@ -1,9 +1,5 @@
-  .new-background {
+.new-background{
     --background: rgb(199, 28, 57);
-  }
-  .new-background-color {
-    --background: #A6ACAF;
-    --background-hover: #A6ACAF;
   }
   .white {
     color: #FFFCF2
@@ -51,31 +47,6 @@
   .no-padding-top {
     padding-top: 0px;
   }
-  .padding-left-40 {
-    padding-left: 40px;
-  }
   .fontt {
     font-size: 14px;
   }
-  //columnas tabla
-  .medCol{
-    min-width: 110px;
-    max-width: 120px;
-    padding: 5px;
-  }
-  .dosisCol{
-    min-width: 60px;
-    max-width: 90px;
-    padding: 5px;
-  }
-  .horaCol{
-    min-width: 60px;
-    max-width: 70px;
-    padding: 5px;
-  }
-  .colGris{
-    background-color: rgb(196, 196, 196);
-    border-radius: 30%;
-    padding: 5px;
-  }
-  

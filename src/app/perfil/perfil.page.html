@@ -8,7 +8,18 @@
 </ion-header>
 
 <ion-content>
+  <div class="center padding-top-10">
+    <img src="assets/usuario.png" class="gota circle">
+    <div><ion-label>MayriBautista@gmail.com</ion-label></div>
+  </div>
+    
+  <div class="padding-top-20">
+    <ion-item>
+      <ion-label class="fontt">Nombre</ion-label>
+      <ion-input class="right" type="text" placeholder="Mayri Bautista"></ion-input>
+    </ion-item>
 
+<<<<<<< HEAD
     <div style="text-align: center; padding-left: 2%; padding-right: 2%; padding-top: 5%;">
       <ion-item color="rose" style="margin-bottom: 2%;">
         <ion-icon color="rose" name="person"></ion-icon>
@@ -82,4 +93,52 @@
 <ion-button expand="full" shape="round" color="danger">Guardar</ion-button>
 
 </div>
+=======
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Teléfono</ion-label>
+      <ion-input class="right" placeholder="6182958640"></ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+        <ion-label class="fontt">Sexo</ion-label>
+        <ion-select value="Femenino">
+          <ion-select-option value="Femenino">Femenino</ion-select-option>
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Sin especificar">Otro</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+        <ion-label class="fontt">Tipo de diabetes</ion-label>
+        <ion-select value="4">
+            <ion-select-option value="1">Tipo 1</ion-select-option>
+            <ion-select-option value="2">Tipo 2</ion-select-option>
+            <ion-select-option value="3">Gestacional</ion-select-option>
+            <ion-select-option value="4">Prediabetes</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+        <ion-label class="fontt">Fecha de Nacimiento</ion-label>
+        <ion-datetime value="1998-01-14" display-format="DD MMMM, YYYY"
+          month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+          day-short-names="dom,lun,mar,mier,jue,vie,sab">
+        </ion-datetime>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Peso (Kg)</ion-label>
+      <ion-input type="decimal" class="right" placeholder="65"></ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Estatura (Mts)</ion-label>
+      <ion-input type="decimal" class="right" placeholder="1.75"></ion-input>
+    </ion-item>
+  </div>
+
+    <div class="padding-top-30 center">
+      <ion-button class="new-background">Actualizar</ion-button>
+    </div>
+>>>>>>> 8ea8355b0a97fd2d4dacc20de95a6086970651ee
 </ion-content>
