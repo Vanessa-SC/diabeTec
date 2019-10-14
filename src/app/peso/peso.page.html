@@ -9,7 +9,66 @@
 
 <ion-content>
   <div class="center padding-top-10">
-    <ion-label class="fontt">Control de mi peso </ion-label>
-    <ion-icon name="add-circle" style="zoom:1.75;"></ion-icon>
+    <ion-item routerLink="/add-medicamento">
+      <div class="bold padding-left-40">Control de mi peso</div>
+      <ion-icon name="add-circle" slot="end"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="padding-top-20">
+
+    <div class="no-padding">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="peCol colGris no-padding center">Peso</div>
+          </ion-col>
+          <ion-col>
+            <div class="diaCol colGris no-padding center">Día</div>
+          </ion-col>
+          <ion-col>
+            <div class="horaCol colGris no-padding center">Hora</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <div class="peCol">65 Kg</div>
+            </ion-col>
+            <ion-col>
+              <div class="diaCol">24/08/2019</div>
+            </ion-col>
+            <ion-col>
+              <div class="horaCol">1:09 am</div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="padding-top-100 padding center">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="no-padding center">Máximo</div>
+          </ion-col>
+          <ion-col>
+            <div class="no-padding center">Promedio</div>
+          </ion-col>
+          <ion-col>
+            <div class="no-padding center">Bajo</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <div class="Col acol center padding-left">65 Kg</div>
+            </ion-col>
+            <ion-col>
+              <div class="Col pcol center">65 Kg</div>
+            </ion-col>
+            <ion-col>
+              <div class="Col bcol center">65 Kg</div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </div>
   </div>
 </ion-content>
