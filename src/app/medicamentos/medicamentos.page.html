@@ -1,12 +1,51 @@
 <ion-header>
   <ion-toolbar class="new-background">
-      <ion-buttons slot="start"  class="white">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="white">Medicamentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="center padding-top-10">
+    <ion-item routerLink="/add-medicamento">
+      <div class="bold padding-left-40">Medicamentos</div>
+      <ion-icon name="add-circle" slot="end"></ion-icon>
+    </ion-item>
+  </div>
 
+  <div class="padding-top-20">
+
+    <div class="no-padding">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="medCol colGris no-padding">Medicamento</div>
+          </ion-col>
+          <ion-col>
+            <div class="dosisCol colGris no-padding">Dósis</div>
+          </ion-col>
+          <ion-col>
+            <div class="horaCol colGris no-padding">Hora</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <div class="medCol">Glidin 4mg</div>
+            </ion-col>
+            <ion-col>
+              <div class="dosisCol">1 pastilla</div>
+            </ion-col>
+            <ion-col>
+              <div class="horaCol">8:00 am <br> 8:00 pm</div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="padding-top-30 center">
+      <ion-button class="new-background">Guardar</ion-button>
+    </div>
+  </div>
 </ion-content>
