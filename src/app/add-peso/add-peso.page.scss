@@ -1,0 +1,52 @@
+.new-background{
+  --background: rgb(199, 28, 57);
+  --background-hover: rgb(199, 28, 57);
+}
+.white {
+  color: #FFFCF2
+}
+.f-color{
+    --color: #565858;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+  .bold {
+    font-weight: 550
+  }
+  .light {
+    font-weight: 300
+  }
+  //Padding
+  .padding-top-5 {
+    padding-top: 5px;
+  }
+  .padding-top-10 {
+    padding-top: 10px;
+  }
+  .padding-top-20 {
+    padding-top: 20px;
+  }
+  .padding-top-30 {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px; 
+  }
+  .padding-top-40 {
+    padding-top: 40px;
+  }
+  .padding-top-60 {
+    padding-top: 60px;
+  }
+  .no-padding {
+    padding: 0px;
+  }
+  .no-padding-top {
+    padding-top: 0px;
+  }
+  .fontt {
+    font-size: 14px;
+  }
