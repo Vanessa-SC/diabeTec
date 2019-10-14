@@ -1,6 +1,23 @@
-.new-background{
+  .new-background {
     --background: rgb(199, 28, 57);
+  }
+  .new-background-color {
+    --background: #A6ACAF;
+    --background-hover: #A6ACAF;
   }
   .white {
     color: #FFFCF2
+  }
+  .center {
+    text-align: center
+  }
+  .padding {
+    padding-left: 10px;
+    padding-right: 10px; 
+  }
+  .padding-top-20 {
+    padding-top: 20px;
+  }
+  .padding-top-30 {
+    padding-top: 30px;
   }
