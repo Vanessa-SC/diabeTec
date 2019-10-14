@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'ejercicios', loadChildren: './ejercicios/ejercicios.module#EjerciciosPageModule' },
   { path: 'bitacora', loadChildren: './bitacora/bitacora.module#BitacoraPageModule' },
   { path: 'add-medicamento', loadChildren: './add-medicamento/add-medicamento.module#AddMedicamentoPageModule' },
-  { path: 'add-peso', loadChildren: './add-peso/add-peso.module#AddPesoPageModule' },
+  { path: 'add-peso', loadChildren: './add-peso/add-peso.module#AddPesoPageModule' },  { path: 'add-recordatorio', loadChildren: './add-recordatorio/add-recordatorio.module#AddRecordatorioPageModule' },
+
 
 ];
 
