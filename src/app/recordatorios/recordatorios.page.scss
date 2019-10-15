@@ -1,6 +1,14 @@
   .new-background{
     --background: rgb(199, 28, 57);
   }
+  .icono {
+    text-align: left;
+    width: 30%;
+  }
+  .icono1 {
+    text-align: left;
+    width: 80%;
+  }
   .white {
     color: #FFFCF2
   }
@@ -8,7 +16,7 @@
     font-weight: 700
   }
   .fontt {
-    font-size: 18px;
+    font-size: 25px;
   }
   .bold {
     font-weight: 700
@@ -47,10 +55,35 @@
     padding-top: 100px;
   }
   .padding {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .mgl-30 {
     margin-left: 30px;
     margin-right: 30px;
   }
+    //columnas tabla
+    .aCol{
+      min-width: 130px;
+      max-width: 150px;
+    }
+    .bCol{
+      min-width: 50px;
+      max-width: 80px;
+      text-align: right;
+    }
+    .cCol{
+      min-width: 20px;
+      max-width: 30px;
+      text-align: left;
+    }
+    .dCol{
+      min-width: 110px;
+      max-width: 120px;
+      text-align: left;
+    }
+    .colGris{
+      background-color: rgb(196, 196, 196);
+      border-radius: 10%;
+    }
+    

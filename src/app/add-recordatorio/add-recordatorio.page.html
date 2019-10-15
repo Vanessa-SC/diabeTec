@@ -8,5 +8,40 @@
   </ion-header>
 
 <ion-content>
+  <div class="center padding-top-10">
+   <div class="bold">Agregar recordatorio</div>
+  </div>
 
+  <div class="padding-top-20">
+      <ion-item class="padding-top-5">
+          <ion-label class="fontt">Hora</ion-label>
+            <ion-datetime [(ngModel)]="hora" displayFormat="h:mm a"></ion-datetime>
+      </ion-item>
+  
+      <ion-item class="padding-top-5">
+          <ion-label class="fontt">Fecha</ion-label>
+          <ion-datetime [(ngModel)]="fecha" value="2019-10-14" display-format="DD MMMM, YYYY"
+            month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+            day-short-names="dom,lun,mar,mier,jue,vie,sab">
+          </ion-datetime>
+      </ion-item>
+  
+      <ion-item class="padding-top-5">
+        <ion-label class="fontt">Repetición</ion-label>
+        <ion-select [(ngModel)]="repeticion" value="repeticion">
+            <ion-select-option value="1">Una vez</ion-select-option>
+            <ion-select-option value="2">Cada día</ion-select-option>
+            <ion-select-option value="3">Elige los días</ion-select-option>
+        </ion-select>
+    </ion-item>
+      
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt" position="floating">Notas</ion-label>
+      <ion-textarea [(ngModel)]="notas" ></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="padding-top-30 center">
+    <ion-button class="new-background">Guardar</ion-button>
+  </div>
 </ion-content>
