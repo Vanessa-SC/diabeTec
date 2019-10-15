@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'bitacora', loadChildren: './bitacora/bitacora.module#BitacoraPageModule' },
   { path: 'add-medicamento', loadChildren: './add-medicamento/add-medicamento.module#AddMedicamentoPageModule' },
   { path: 'add-peso', loadChildren: './add-peso/add-peso.module#AddPesoPageModule' },  { path: 'add-recordatorio', loadChildren: './add-recordatorio/add-recordatorio.module#AddRecordatorioPageModule' },
+  { path: 'add-glucosa', loadChildren: './add-glucosa/add-glucosa.module#AddGlucosaPageModule' },
 
 
 ];
