@@ -1,0 +1,169 @@
+﻿{
+    "status": "ok",
+    "feed": {
+        "url": "http://elpais.com/tag/rss/salud/a",
+        "title": "Salud",
+        "link": "https://elpais.com/tag/rss/salud/a",
+        "author": "",
+        "description": "Últimas noticias sobre Salud",
+        "image": "https://ep00.epimg.net/iconos/v1.x/v1.0/logos/cabecera_portada.png"
+    },
+    "items": [
+        {
+            "title": "Bruselas presionará hasta el final a Estados Unidos por los aranceles",
+            "pubDate": "2019-10-14 20:02:33",
+            "link": "https://elpais.com/economia/2019/10/14/actualidad/1571080252_824764.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/economia/2019/10/14/actualidad/1571080252_824764.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "Lluís Pellicer",
+            "thumbnail": "",
+            "description": "La Comisión busca que Trump \"congele\" las sanciones por Airbus, que podrá imponer esta semana",
+            "content": "La Comisión busca que Trump \"congele\" las sanciones por Airbus, que podrá imponer esta semana",
+            "enclosure": {
+                "link": "http://elpais.com/economia/imagenes/2019/10/14/actualidad/1571080252_824764_1571080376_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "Las ciudades quieren ser resilientes. ¿Pero qué significa eso?",
+            "pubDate": "2019-10-14 20:00:29",
+            "link": "https://elpais.com/economia/2019/10/14/actualidad/1571081100_985548.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/economia/2019/10/14/actualidad/1571081100_985548.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "Mariana Kaipper Ceratti",
+            "thumbnail": "",
+            "description": "El crecimiento poblacional obliga a las ciudades a considerar alternativas de urbanización verdes",
+            "content": "El crecimiento poblacional obliga a las ciudades a considerar alternativas de urbanización verdes",
+            "enclosure": {
+                "link": "http://elpais.com/economia/imagenes/2019/10/14/actualidad/1571081100_985548_1571081403_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "El dengue se multiplica en México y amenaza las grandes ciudades",
+            "pubDate": "2019-10-14 18:44:11",
+            "link": "https://elpais.com/sociedad/2019/10/14/actualidad/1571074511_350964.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/sociedad/2019/10/14/actualidad/1571074511_350964.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "David Marcial Pérez",
+            "thumbnail": "",
+            "description": "Los casos se disparan un 250% respecto al año pasado. Jalisco, con 13 muertos, es uno de los epicentros del brote. Las autoridades descartan de momento emitir la alerta epidemiológica",
+            "content": "Los casos se disparan un 250% respecto al año pasado. Jalisco, con 13 muertos, es uno de los epicentros del brote. Las autoridades descartan de momento emitir la alerta epidemiológica",
+            "enclosure": {
+                "link": "http://elpais.com/sociedad/imagenes/2019/10/14/actualidad/1571074511_350964_1571075035_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "La asistencia sanitaria para los británicos dependerá del acuerdo con la UE",
+            "pubDate": "2019-10-14 18:02:40",
+            "link": "https://elpais.com/sociedad/2019/10/14/actualidad/1571074523_005835.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/sociedad/2019/10/14/actualidad/1571074523_005835.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "P. L.",
+            "thumbnail": "",
+            "description": "El Gobierno recuerda a las comunidades autónomas las medidas de contingencia en el Consejo Interterritorial de Sanidad",
+            "content": "El Gobierno recuerda a las comunidades autónomas las medidas de contingencia en el Consejo Interterritorial de Sanidad",
+            "enclosure": {
+                "link": "http://elpais.com/sociedad/imagenes/2019/10/14/actualidad/1571074523_005835_1571075343_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "Elton John: “Michael Jackson perdió totalmente la cabeza”",
+            "pubDate": "2019-10-14 10:43:30",
+            "link": "https://elpais.com/elpais/2019/10/14/gente/1571045539_178432.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/elpais/2019/10/14/gente/1571045539_178432.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "El País",
+            "thumbnail": "",
+            "description": "El cantante habla en sus memorias del 'rey del pop'. \"Por alguna razón él no estaba cómodo en compañía de adultos\", explica.",
+            "content": "El cantante habla en sus memorias del 'rey del pop'. \"Por alguna razón él no estaba cómodo en compañía de adultos\", explica.",
+            "enclosure": {
+                "link": "http://elpais.com/elpais/imagenes/2019/10/14/gente/1571045539_178432_1571049107_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "El mundo pierde el 14% de los alimentos desde la recogida hasta el minorista",
+            "pubDate": "2019-10-14 10:30:31",
+            "link": "https://elpais.com/elpais/2019/10/10/planeta_futuro/1570728826_938421.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/elpais/2019/10/10/planeta_futuro/1570728826_938421.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "Ángeles Lucas",
+            "thumbnail": "",
+            "description": "Se publica hoy el último informe del Estado Mundial de la Agricultura y la Alimentación. Los cereales y las legumbres causan la mayor huella hídrica y de emisiones de gases de efecto invernadero entre los productos que se derrochan",
+            "content": "Se publica hoy el último informe del Estado Mundial de la Agricultura y la Alimentación. Los cereales y las legumbres causan la mayor huella hídrica y de emisiones de gases de efecto invernadero entre los productos que se derrochan",
+            "enclosure": {
+                "link": "http://elpais.com/elpais/imagenes/2019/10/10/planeta_futuro/1570728826_938421_1570731564_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "La última barbaridad de Gwyneth Paltrow: determina cuál es el peso mínimo para poder vivir",
+            "pubDate": "2019-10-14 08:38:12",
+            "link": "https://elpais.com/elpais/2019/10/14/gente/1571041404_545227.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/elpais/2019/10/14/gente/1571041404_545227.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "El País",
+            "thumbnail": "",
+            "description": "La comunidad científica critica las recomendaciones de la actriz, realizadas a través de su página Goop de estilo de vida",
+            "content": "La comunidad científica critica las recomendaciones de la actriz, realizadas a través de su página Goop de estilo de vida",
+            "enclosure": {
+                "link": "http://elpais.com/elpais/imagenes/2019/10/14/gente/1571041404_545227_1571042174_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "Ejercicios isométricos: cómo ponernos en forma sin mover un músculo",
+            "pubDate": "2019-10-14 05:32:12",
+            "link": "https://elpais.com/elpais/2019/10/11/buenavida/1570789527_562442.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/elpais/2019/10/11/buenavida/1570789527_562442.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "Salomé García",
+            "thumbnail": "",
+            "description": "Generar una gran tensión muscular activa fibras que el entrenamiento dinámico habitual no alcanza a movilizar",
+            "content": "Generar una gran tensión muscular activa fibras que el entrenamiento dinámico habitual no alcanza a movilizar",
+            "enclosure": {
+                "link": "http://elpais.com/elpais/imagenes/2019/10/11/buenavida/1570789527_562442_1570791694_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "Charles Moore: “Nos estamos ahogando entre nuestros desechos”",
+            "pubDate": "2019-10-13 22:10:48",
+            "link": "https://elpais.com/sociedad/2019/10/08/actualidad/1570544274_398711.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/sociedad/2019/10/08/actualidad/1570544274_398711.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "Pedro Gorospe",
+            "thumbnail": "",
+            "description": "El capitan que descubrió la aglomeración de basura y plástico en el océano dice que en treinta años habrá más plástico que peces",
+            "content": "El capitan que descubrió la aglomeración de basura y plástico en el océano dice que en treinta años habrá más plástico que peces",
+            "enclosure": {
+                "link": "http://elpais.com/sociedad/imagenes/2019/10/08/actualidad/1570544274_398711_1570559914_miniatura_normal.jpg",
+                "type": "image/jpeg",
+                "length": 25
+            },
+            "categories": []
+        },
+        {
+            "title": "No olvidemos otros temas importantes",
+            "pubDate": "2019-10-13 22:00:59",
+            "link": "https://elpais.com/elpais/2019/10/13/opinion/1570981236_368993.html#?ref=rss&amp;format=simple&amp;link=link",
+            "guid": "https://elpais.com/elpais/2019/10/13/opinion/1570981236_368993.html#?ref=rss&amp;format=simple&amp;link=guid",
+            "author": "Arnau Rosa Bejarano",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        }
+    ]
+}

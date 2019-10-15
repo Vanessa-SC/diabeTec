@@ -17,8 +17,16 @@ const routes: Routes = [
   { path: 'graficas', loadChildren: './graficas/graficas.module#GraficasPageModule' },
   { path: 'ejercicios', loadChildren: './ejercicios/ejercicios.module#EjerciciosPageModule' },
   { path: 'bitacora', loadChildren: './bitacora/bitacora.module#BitacoraPageModule' },
+<<<<<<< HEAD
   { path: 'add-medicamento', loadChildren: './add-medicamento/add-medicamento.module#AddMedicamentoPageModule' },  { path: 'receta', loadChildren: './receta/receta.module#RecetaPageModule' },
 
+=======
+  { path: 'add-medicamento', loadChildren: './add-medicamento/add-medicamento.module#AddMedicamentoPageModule' },
+  { path: 'add-peso', loadChildren: './add-peso/add-peso.module#AddPesoPageModule' },  { path: 'add-recordatorio', loadChildren: './add-recordatorio/add-recordatorio.module#AddRecordatorioPageModule' },
+  { path: 'add-glucosa', loadChildren: './add-glucosa/add-glucosa.module#AddGlucosaPageModule' },
+
+
+>>>>>>> 90436884af52c3537f560fddb7a9d8766f03be0e
 ];
 
 @NgModule({
