@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'graficas', loadChildren: './graficas/graficas.module#GraficasPageModule' },
   { path: 'ejercicios', loadChildren: './ejercicios/ejercicios.module#EjerciciosPageModule' },
   { path: 'bitacora', loadChildren: './bitacora/bitacora.module#BitacoraPageModule' },
-  { path: 'add-medicamento', loadChildren: './add-medicamento/add-medicamento.module#AddMedicamentoPageModule' },
+  { path: 'add-medicamento', loadChildren: './add-medicamento/add-medicamento.module#AddMedicamentoPageModule' },  { path: 'receta', loadChildren: './receta/receta.module#RecetaPageModule' },
+
 ];
 
 @NgModule({
