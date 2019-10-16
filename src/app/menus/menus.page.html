@@ -12,6 +12,7 @@
         <ion-item color="rose" style="margin-bottom: 2%;">
         <div><ion-label>Menú del día</ion-label></div>
         </ion-item>
+        
 
 
         <div class="center padding-top-10">
@@ -42,17 +43,21 @@
 
         <div class="center padding-top-10">
             <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button (click)="irA('/receta')" color="warning">COMIDA</ion-button>
-           
-          
-              <ion-button color="warning">Ver receta<ion-icon name="md-eye" style="zoom:1.0;"></ion-icon></ion-button>
-            </ion-item></div>
-     
+            <ion-button color="warning">COMIDA</ion-button>
+        </ion-item> </div>
+            
         <div class="center padding-top-10">
             <ion-item color="rose" style="margin-bottom: 2%;">
             <ion-button color="warning">Pechugas de pollo con almendras</ion-button>
         </ion-item></div>
 
+        <div class="center padding-top-10">
+            <ion-item routerLink="/add-medicamento">
+              <div class="bold padding-left-40">Ver receta</div>
+              <ion-icon name="ios-eye" slot="end"></ion-icon>
+            </ion-item>
+          </div>
+        
         
 
 
@@ -75,17 +80,10 @@
             <ion-item color="rose" style="margin-bottom: 2%;">
             <ion-button color="primary">1 HUEVO CON EJOTES Y JAMON</ion-button>
         </ion-item></div>
+
         <div class="center padding-top-10">
             <ion-item color="rose" style="margin-bottom: 2%;">
             <ion-button color="primary">1 VASO DE TÉ VERDE</ion-button>
         </ion-item></div>
-       
-
-        
-  
-</div>
-
-
-        
-
+      </div>
 </ion-content>

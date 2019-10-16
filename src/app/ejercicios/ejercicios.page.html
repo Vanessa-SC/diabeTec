@@ -8,5 +8,77 @@
 </ion-header>
 
 <ion-content>
+    <div class="center padding-top-10">
+        <ion-item color="rose" style="margin-bottom: 2%;">
+        <div><ion-label>Actividad fisíca del dia</ion-label></div>
+        </ion-item></div>
 
+    <div class="center padding-top-10">
+        <ion-item color="rose" style="margin-bottom: 2%;">
+          <ion-icon name="calendar" style="zoom:1.0;"></ion-icon>
+            <ion-datetime [(ngModel)]="menudia" placeholder="Selecciona el día" display-format="DD MMMM"
+              month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+              day-short-names="dom,lun,mar,mier,jue,vie,sab">
+            </ion-datetime>
+            </ion-item></div>
+
+
+    <div class="padding-top-20">
+
+          <div class="padding">
+            <ion-grid class="colGris">
+                 <div><ion-icon name="md-time" style="zoom:1.5"></ion-icon>
+                  <label>5 minutos | 10 minutos</label></div>
+           </ion-grid>
+          </div>   
+     </div>  
+
+     <ion-row>
+        <div class="center padding-top-10">
+            <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-col> 
+       <img src="assets/181.png">
+    </ion-col>
+    <ion-col>
+        <div class="bold">Squats</div>
+        <div><label>x12</label></div>
+    </ion-col>
+  </ion-item></div>
+</ion-row>
+  
+
+
+<ion-row>
+    <div class="center padding-top-10">
+        <ion-item color="rose" style="margin-bottom: 2%;">
+    <ion-col> 
+   <img src="assets/180.png">
+</ion-col>
+<ion-col>
+    <div class="bold">Salto lateral</div>
+    <div><label>00:30seg</label></div>
+</ion-col>
+</ion-item></div>
+</ion-row>
+
+<ion-row>
+    <div class="center padding-top-10">
+        <ion-item color="rose" style="margin-bottom: 2%;">
+    <ion-col> 
+   <img src="assets/182.png">
+</ion-col>
+<ion-col>
+    <div class="bold">Plancha</div>
+    <div><label>00:30seg</label></div>
+</ion-col>
+</ion-item></div>
+</ion-row>
+
+
+
+     
+         
+
+    
+       
 </ion-content>
