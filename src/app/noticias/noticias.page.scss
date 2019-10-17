@@ -1,6 +1,95 @@
+
+*{
+  color: rgb(0, 0, 0);
+}
+.white {
+color: #FFFCF2
+}
+.gota {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.blackText{
+  color: black;
+}
+
+.menuItem{
+  width:48%;
+  margin: 1%;
+ // padding-top:40%;
+  float: left;
+}
+
+.circle{
+  background-color: rgb(206, 206, 206);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.logoMenu{
+  padding: 20%;
+  padding-bottom: 0%;
+  width: 90%;
+}
+.logo {
+text-align: center;
+width: 65%;
+}
+.center {
+text-align: center
+}
+.left {
+text-align: left
+}
+.right {
+text-align: right
+}
+.padding-left {
+padding-left: 10px;
+}
+.padding-right {
+padding-right: 10px; 
+}
+.padding {
+padding-left: 10px;
+padding-right: 10px; 
+}
+.padding-top-10 {
+padding-top: 10px;
+}
+.padding-top-30 {
+padding-top: 30px;
+}
+.padding-top-50 {
+  padding-top: 50px;
+}
+.padding-top-70 {
+  padding-top: 70px;
+}
+.padding-top-90 {
+  padding-top: 90px;
+}
+.bold {
+font-weight: 550
+}
+.light {
+font-weight: 300
+}
+.fontt {
+font-size: 20px;
+}
+.fontv {
+font-size: 12px;
+}
+.fontl {
+font-size: 14px;
+}
+.new-background-color{
+--background: #A6ACAF;
+--background-hover: #A6ACAF;
+}
 .new-background{
-    --background: rgb(199, 28, 57);
-  }
-  .white {
-    color: #FFFCF2
-  }
+--background: rgb(199, 28, 57);
+}
