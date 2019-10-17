@@ -4,3 +4,132 @@
   .white {
     color: #FFFCF2
   }
+  .icono1 {
+    text-align: left;
+    width: 80%;
+  }
+.white {
+  color: #FFFCF2
+}
+.bold {
+  font-weight: 400
+}
+.fontt {
+  font-size: 15px;
+}
+
+.light {
+  font-weight: 300
+}
+.left {
+  text-align: left
+}
+.right {
+  text-align: right
+}
+.center {
+  text-align: center
+}
+.no-padding {
+  padding: 0px;
+}
+.padding-top-5 {
+  padding-top: 5px;
+}
+.padding-top-10 {
+  padding-top: 10px;
+}
+.padding-top-20 {
+  padding-top: 20px;
+}
+.padding-top-30 {
+  padding-top: 30px;
+}
+.padding-left-40 {
+  padding-left: 40px;
+}
+.padding-top-100 {
+  padding-top: 100px;
+}
+.padding {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.mgl-30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+  //columnas tabla
+  .aCol{
+    min-width: 130px;
+    max-width: 150px;
+  }
+  .Col{
+    min-width: 50px;
+    max-width: 80px;
+    text-align: right;
+  }
+  .cCol{
+    min-width: 20px;
+    max-width: 30px;
+    text-align: left;
+  }
+  .dCol{
+    min-width: 110px;
+    max-width: 120px;
+    text-align: left;
+  }
+  .colGris{
+    background-color: rgb(196, 196, 196);
+    border-radius: 10%;
+  }
+  .colRojo{
+    background-color: rgb(151, 14, 14);
+    border-radius: 10%;
+  }
+  
+  .colGris{
+    background-color: rgb(196, 196, 196);
+    border-radius: 30%;
+    padding: 5px;
+  }
+  .colRojo{
+    background-color: rgb(165, 18, 18);
+    border-radius: 30%;
+    padding: 5px;
+  }
+  .Col{
+    min-width: 25px;
+    max-width: 70px;
+    padding: 15px;
+  }
+  .bcol{
+    background-color: rgb(14, 13, 11);
+    border-radius: 100%;
+    padding: 15px;
+  }
+  .colGris{
+    background-color: rgb(196, 196, 196);
+    border-radius: 30%;
+    padding: 5px;
+  }
+  .Col{
+    min-width: 25px;
+    max-width: 70px;
+    padding: 15px;
+  }
+  .bcol{
+    background-color: rgb(226, 162, 43);
+    border-radius: 100%;
+    padding: 15px;
+  }
+  .pcol{
+    background-color: rgb(79, 85, 87);
+    border-radius: 100%;
+    padding: 15px;
+  }
+  .acol{
+    background-color: rgb(224, 55, 55);
+    border-radius: 100%;
+    padding: 15px;
+  }
