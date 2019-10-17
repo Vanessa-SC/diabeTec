@@ -1,91 +1,96 @@
 <ion-header>
   <ion-toolbar class="new-background">
-      <ion-buttons slot="start"  class="white">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="white">Menú de alimentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="center padding-top-10">
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <div>
+        <ion-label>Menú del día</ion-label>
+      </div>
+    </ion-item>
+
     <div class="center padding-top-10">
-        <ion-item color="rose" style="margin-bottom: 2%;">
-        <div><ion-label>Menú del día</ion-label></div>
-        </ion-item>
-
-
-        <div class="center padding-top-10">
       <ion-item color="rose" style="margin-bottom: 2%;">
         <ion-icon name="calendar" style="zoom:1.0;"></ion-icon>
-          <ion-datetime [(ngModel)]="menudia" placeholder="Selecciona el día" display-format="DD MMMM, YYYY"
-            month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
-            day-short-names="dom,lun,mar,mier,jue,vie,sab">
-          </ion-datetime>
-          </ion-item></div>
-       
+        <ion-datetime [(ngModel)]="menudia" placeholder="Selecciona el día" display-format="DD MMMM, YYYY"
+          month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+          day-short-names="dom,lun,mar,mier,jue,vie,sab">
+        </ion-datetime>
+      </ion-item>
+    </div>
 
-          <div class="center padding-top-10">
-              <ion-item color="rose" style="margin-bottom: 2%;">
-              <ion-button color="danger">DESAYUNNO</ion-button>
-          </ion-item></div>
-     
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="danger">2 piezas de pan integral con mermelada</ion-button>
-        </ion-item></div>
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="danger">1 vaso de leche</ion-button>
-        </ion-item></div>
-     
-        
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="danger">DESAYUNO</ion-button>
+      </ion-item>
+    </div>
 
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button (click)="irA('/receta')" color="warning">COMIDA</ion-button>
-           
-          
-              <ion-button color="warning">Ver receta<ion-icon name="md-eye" style="zoom:1.0;"></ion-icon></ion-button>
-            </ion-item></div>
-     
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="warning">Pechugas de pollo con almendras</ion-button>
-        </ion-item></div>
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="danger">2 piezas de pan integral con mermelada</ion-button>
+      </ion-item>
+    </div>
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="danger">1 vaso de leche</ion-button>
+      </ion-item>
+    </div>
 
-        
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="warning">COMIDA</ion-button>
+        <ion-button routerLink="/receta" color="warning">Ver receta<ion-icon name="md-eye" style="zoom:1.0;"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </div>
 
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="warning">Pechugas de pollo con almendras</ion-button>
+      </ion-item>
+    </div>
 
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="success">MERIENDA</ion-button>
-        </ion-item></div>
-     
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="success">1 YOGURT NATURAL(125ML)</ion-button>
-        </ion-item></div>
+    <div routerLink="/receta" class="center padding-top-10">
+      <ion-item>
+        <div class="bold padding-left-40">Ver receta</div>
+        <ion-icon name="ios-eye" slot="end"></ion-icon>
+      </ion-item>
+    </div>
 
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="primary">CENA</ion-button>
-        </ion-item></div>
-     
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="primary">1 HUEVO CON EJOTES Y JAMON</ion-button>
-        </ion-item></div>
-        <div class="center padding-top-10">
-            <ion-item color="rose" style="margin-bottom: 2%;">
-            <ion-button color="primary">1 VASO DE TÉ VERDE</ion-button>
-        </ion-item></div>
-       
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="success">MERIENDA</ion-button>
+      </ion-item>
+    </div>
 
-        
-  
-</div>
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="success">1 YOGURT NATURAL(125ML)</ion-button>
+      </ion-item>
+    </div>
 
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="primary">CENA</ion-button>
+      </ion-item>
+    </div>
 
-        
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="primary">1 HUEVO CON EJOTES Y JAMON</ion-button>
+      </ion-item>
+    </div>
 
+    <div class="center padding-top-10">
+      <ion-item color="rose" style="margin-bottom: 2%;">
+        <ion-button color="primary">1 VASO DE TÉ VERDE</ion-button>
+      </ion-item>
+    </div>
+  </div>
 </ion-content>
