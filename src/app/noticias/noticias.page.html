@@ -1,80 +1,8 @@
-<ion-menu side="start" menuId="first" style="background: rgb(199, 28, 57);">
-  <ion-header>
-    <ion-toolbar class="new-background">
-      <ion-title class="white">DiabeTec</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item (click)="irA('/inicio')">
-        <ion-icon color="rose" name="home"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning"> Inicio</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/perfil')">
-        <ion-icon color="rose" name="person"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Perfil</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/medicamentos')">
-        <ion-icon color="rose" name="medkit"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Medicamentos</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/menus')">
-        <ion-icon color="rose" name="cafe"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Menú de alimentos</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/presion')">
-        <ion-icon color="rose" name="heart"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Presión arterial</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/peso')">
-        <ion-icon color="rose" name="cube"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Peso</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/recordatorios')">
-        <ion-icon color="rose" name="alarm"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Recordatorios</h6>
-        </div>
-      </ion-item>
-      <ion-item (click)="irA('/ajustes')">
-        <ion-icon color="rose" name="settings"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Ajustes</h6>
-        </div>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-  <ion-footer>
-    <ion-toolbar color="rose">
-      <ion-item color="rose" (click)="irA('/home')">
-        <ion-icon color="light" name="power"></ion-icon>
-        <div style="margin-left: 4%;">
-          <h6 color="warning">Cerrar Sesion</h6>
-        </div>
-      </ion-item>
-    </ion-toolbar>
-  </ion-footer>
-</ion-menu>
-
 <ion-header>
   <ion-toolbar class="new-background">
-    <ion-buttons slot="start">
-      <ion-button (click)="openFirst()">
-        <ion-icon name="menu" class="white"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+      <ion-buttons slot="start"  class="white">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
     <ion-title class="white">Noticias</ion-title>
   </ion-toolbar>
 </ion-header>
