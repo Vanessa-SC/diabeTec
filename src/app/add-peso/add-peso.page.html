@@ -31,14 +31,14 @@
           </ion-datetime>
       </ion-item>
   
-      <ion-item class="padding-top-5">
+      <!-- <ion-item class="padding-top-5">
         <ion-label class="fontt">Recordatorio</ion-label>
         <ion-select [(ngModel)]="recordatorio" value="recordatorio">
             <ion-select-option value="1">Ninguno</ion-select-option>
             <ion-select-option value="2">Diariamente</ion-select-option>
             <ion-select-option value="3">Semanalmente</ion-select-option>
         </ion-select>
-    </ion-item>
+    </ion-item> -->
       
     <ion-item class="padding-top-5">
       <ion-label class="fontt" position="floating">Notas</ion-label>
@@ -47,6 +47,6 @@
   </div>
 
   <div class="padding-top-30 center">
-    <ion-button class="new-background">Guardar</ion-button>
+    <ion-button class="new-background" (click)="guardarPeso()">Guardar</ion-button>
   </div>
 </ion-content>

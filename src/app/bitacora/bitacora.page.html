@@ -1,57 +1,55 @@
 <ion-header>
   <ion-toolbar class="new-background">
-      <ion-buttons slot="start"  class="white">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="white">Mi bitácora</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div class="center padding-top-10">
-        <img src="assets/usuario.png">
-        <ion-label>MayriBautista@gmail.com</ion-label>
-    </div>
+  <div class="center padding-top-10">
+    <img src="assets/usuario.png">
+    <ion-label>MayriBautista@gmail.com</ion-label>
+  </div>
 
-    <div class="center padding-top-10">
-        <ion-item color="rose" style="margin-bottom: 2%;">
-          <ion-icon name="calendar" style="zoom:1.0;"></ion-icon>
-            <ion-datetime [(ngModel)]="menudia" placeholder="Selecciona el mes" display-format="MMMM YYYY"
-              month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
-></ion-datetime>
-            
-            </ion-item></div>
-        
+  <div class="center padding-top-10">
+    <ion-item color="rose" style="margin-bottom: 2%;">
+      <ion-icon name="calendar" style="zoom:1.0;"></ion-icon>
+      <ion-datetime [(ngModel)]="menudia" placeholder="Selecciona el mes" display-format="MMMM YYYY"
+        month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre">
+      </ion-datetime>
 
-            <div class="padding-top-20">
+    </ion-item>
+  </div>
 
-                <div class="padding">
-               <ion-grid class="colGris">
-         <ion-grid class="colGris">
-     <ion-grid class="colGris">
- <ion-grid class="colGris">
-                      
-                  <div> <label> Miércoles 25</label></div> 
-                  
-                  <div><ion-icon name="md-time" style="zoom:1.5"></ion-icon>
-                     <label> 9:46 a.m</label></div>
-              
-                    <ion-row>
-                      <ion-col>
-                      <div class="Col pcol center">99.mg/dL</div>
-                      
-                    </ion-col>
-                    <ion-col>
-                        <div><label>Glicemia normal</label></div>
-                      <div><label>2 horas después del desayuno</label></div>
-                    </ion-col>
-                   
-                    </ion-row>
-              </ion-grid>
-           </ion-grid>
-         </ion-grid>
+
+  <div class="padding-top-20">
+
+    <div class="padding">
+      <ion-grid class="colGris">
+        <ion-grid class="colGris">
+          <ion-grid class="colGris">
+            <ion-grid class="colGris">
+              <div> <label> Miércoles 25</label></div>
+              <div>
+                <ion-icon name="md-time" style="zoom:1.5"></ion-icon>
+                <label> 9:46 a.m</label>
+              </div>
+              <ion-row>
+                <ion-col>
+                  <div class="Col pcol center">99.mg/dL</div>
+                </ion-col>
+                <ion-col>
+                  <div><label>Glicemia normal</label></div>
+                  <div><label>2 horas después del desayuno</label></div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-grid>
+        </ion-grid>
       </ion-grid>
-   </div>   
-  </div>              
+    </div>
+  </div>
 
 </ion-content>

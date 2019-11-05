@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,27 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  correo:string;
+  contra:string;
 
+
+  constructor(public route: Router,public toastController: ToastController) {}
+
+  verificar(){
+
+      if( this.correo != undefined && this.contra != undefined){
+        this.route.navigateByUrl('/home');
+      } else {
+        this.alerta('Uno o más campos están vacíos');
+      }
+  }
+  
+  async alerta(mensaje) {
+    const toast = await this.toastController.create({
+      message: mensaje,
+      position: 'middle',
+      duration: 2000
+    });
+    toast.present();
+  }
 }
