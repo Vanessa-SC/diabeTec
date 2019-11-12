@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Storage } from '@angular/Storage';
+// import { Storage } from '@angular/Storage';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class HttpService {
     });
   }
 
-  registro(registro:string,nombre:string,telefono:string,email:string,contra:string,sexo:string,tipoDiab:string,fechaNac:string){
+  registro(nombre:string,telefono:string,email:string,contra:string,sexo:string,tipoDiab:string,fechaNac:string){
     var url = this.httpConexion + 'registro/'+nombre+'/'+telefono+'/'+email+'/'+contra+'/'+sexo+'/'+tipoDiab+'/'+fechaNac;
     return new Promise((resolve, reject) => {
      this.http.get(url)
@@ -37,6 +37,18 @@ export class HttpService {
     });
   }
 
+  //agregarG/{glucosa}/{hora}/{fecha}/{periodo}/{actividad}/{medicacion}/{recordatorio}/{nota}
+  agregarG(glucosa:string,hora:string,fecha:string,periodo:string,actividad:boolean,medicacion:boolean,recordatorio:string,nota:string){
+    var url = this.httpConexion + 'agregarG/'+glucosa+'/'+hora+'/'+fecha+'/'+periodo+'/'+actividad+'/'+medicacion+'/'+recordatorio+'/'+nota;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
 
 
   traerNoticias(){
