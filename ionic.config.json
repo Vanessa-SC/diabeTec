@@ -1,5 +1,7 @@
 {
   "name": "diabeTec",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
