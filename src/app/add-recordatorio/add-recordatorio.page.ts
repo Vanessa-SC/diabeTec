@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Storage } from '@ionic/Storage';
 
 @Component({
   selector: 'app-add-recordatorio',
@@ -9,12 +10,18 @@ import { ToastController } from '@ionic/angular';
 })
 export class AddRecordatorioPage implements OnInit {
 
+  idUsuario:string;
   hora:string;
   fecha:string;
   repeticion:string;
   notas:string;
 
-  constructor(public route: Router, public toastController:ToastController) { }
+  constructor(private storage:Storage,public route: Router, public toastController:ToastController) {
+    storage.get("idUsuario").then((val) => {
+      console.log('idUsuario', val);
+      this.idUsuario = val;
+    });
+   }
 
   ngOnInit() {
   }

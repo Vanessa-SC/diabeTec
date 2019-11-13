@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Storage } from '@ionic/Storage';
 
 @Component({
   selector: 'app-presion',
@@ -8,6 +9,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./presion.page.scss'],
 })
 export class PresionPage implements OnInit {
+  
+  idUsuario:string;
   sistolica:string;
   diastolica:string;
   pulso:string;
@@ -16,7 +19,12 @@ export class PresionPage implements OnInit {
   recordatorio:string;
   notas:string;
 
-  constructor(public route: Router, public toastController:ToastController) { }
+  constructor(private storage:Storage,public route: Router, public toastController:ToastController) { 
+    storage.get("idUsuario").then((val) => {
+      console.log('idUsuario', val);
+      this.idUsuario = val;
+    });
+  }
 
   ngOnInit() {
   }

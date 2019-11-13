@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Storage } from '@ionic/Storage';
 
 @Component({
   selector: 'app-add-peso',
@@ -9,11 +10,17 @@ import { ToastController } from '@ionic/angular';
 })
 export class AddPesoPage implements OnInit {
 
+  idUsuario:string;
 peso:string;
 hora:string;
 fecha:string;
 notas:string;
-  constructor(public route: Router, public toastController:ToastController) { }
+  constructor(private storage:Storage,public route: Router, public toastController:ToastController) {
+    storage.get("idUsuario").then((val) => {
+      console.log('idUsuario', val);
+      this.idUsuario = val;
+    });
+   }
 
   ngOnInit() {
   }

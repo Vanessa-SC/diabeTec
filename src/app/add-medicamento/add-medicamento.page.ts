@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Storage } from '@ionic/Storage';
 
 @Component({
   selector: 'app-add-medicamento',
@@ -9,8 +10,14 @@ import { ToastController } from '@ionic/angular';
 })
 export class AddMedicamentoPage implements OnInit {
 
-  constructor(public route: Router, public toastController: ToastController) { }
-
+  constructor(private storage:Storage,public route: Router, public toastController: ToastController) { 
+    storage.get("idUsuario").then((val) => {
+      console.log('idUsuario', val);
+      this.idUsuario = val;
+    });
+  }
+  
+  idUsuario:string;
 unidades:string;
 medicamento:string;
 hora:string;
