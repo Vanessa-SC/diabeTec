@@ -41,7 +41,7 @@ fecha: any ;
         var resultado;
 
         resultado = inv['resultado'];
-        if(resultado == "agregada"){
+        if(resultado == "insertado"){
  
           this.mensajeToast("Toma agregada correctamente.");
           this.route.navigateByUrl('/inicio');
