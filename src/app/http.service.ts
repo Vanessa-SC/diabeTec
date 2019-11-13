@@ -38,8 +38,8 @@ export class HttpService {
   }
 
   //agregarG/{glucosa}/{hora}/{fecha}/{periodo}/{actividad}/{medicacion}/{recordatorio}/{nota}
-  agregarG(glucosa:string,hora:string,fecha:string,periodo:string,actividad:boolean,medicacion:boolean,recordatorio:string,nota:string){
-    var url = this.httpConexion + 'agregarG/'+glucosa+'/'+hora+'/'+fecha+'/'+periodo+'/'+actividad+'/'+medicacion+'/'+recordatorio+'/'+nota;
+  agregarG(glucosa:string,hora:string,fecha:string,periodo:string,actividad:boolean,medicacion:boolean,recordatorio:string,nota:string,idUsuario:string){
+    var url = this.httpConexion + 'agregarG/'+glucosa+'/'+hora+'/'+fecha+'/'+periodo+'/'+actividad+'/'+medicacion+'/'+recordatorio+'/'+nota+'/'+idUsuario;
     return new Promise((resolve, reject) => {
      this.http.get(url)
         .subscribe(data => {

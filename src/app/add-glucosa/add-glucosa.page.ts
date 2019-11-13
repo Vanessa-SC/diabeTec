@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { HttpService } from '../http.service';
+import { Storage } from '@ionic/Storage';
 
 @Component({
   selector: 'app-add-glucosa',
@@ -10,8 +11,14 @@ import { HttpService } from '../http.service';
 })
 export class AddGlucosaPage implements OnInit {
 
-  constructor(public http:HttpService, public route: Router, public toastController:ToastController) { }
+  constructor(public http:HttpService, public route: Router, public toastController:ToastController,private storage:Storage) { 
+    storage.get("idUsuario").then((val) => {
+      console.log('idUsuario', val);
+      this.idUsuario = val;
+    });
+  }
 
+  idUsuario:string;
   glucosa:string; 
   hora:string;
   fecha:string;
@@ -34,7 +41,7 @@ export class AddGlucosaPage implements OnInit {
   }
 
   guardar(){
-    this.http.agregarG(this.glucosa,this.hora,this.fecha,this.periodo,this.actividad,this.medicacion,this.recordatorio,this.notas).then(
+    this.http.agregarG(this.glucosa,this.hora,this.fecha,this.periodo,this.actividad,this.medicacion,this.recordatorio,this.notas,this.idUsuario).then(
       (inv) => {
         console.log(inv);
         var resultado;
