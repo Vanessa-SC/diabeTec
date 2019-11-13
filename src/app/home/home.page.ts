@@ -18,7 +18,7 @@ export class HomePage {
   verificar(){
 
       if( this.correo != undefined && this.contra != undefined){
-        this.route.navigateByUrl('/home');
+        this.route.navigateByUrl('/inicio');
       } else {
         this.alerta('Uno o más campos están vacíos');
       }
