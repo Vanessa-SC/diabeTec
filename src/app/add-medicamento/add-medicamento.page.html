@@ -25,12 +25,12 @@
 
     <ion-item class="padding-top-5">
         <ion-label class="fontt">Hora</ion-label>
-          <ion-datetime [(ngModel)]="hora" displayFormat="h:mm a"></ion-datetime>
+          <ion-datetime [(ngModel)]="hora" pickerFormat="H:mm" displayFormat="h:mm a"></ion-datetime>
     </ion-item>
 
     <ion-item class="padding-top-5">
         <ion-label class="fontt">Fecha</ion-label>
-        <ion-datetime [(ngModel)]="fecha" value="2019-10-14" display-format="DD MMMM, YYYY"
+        <ion-datetime [(ngModel)]="fecha" pickerFormat="YYYY-MM-DD" display-format="DD MMMM, YYYY"
           month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
           day-short-names="dom,lun,mar,mier,jue,vie,sab">
         </ion-datetime>

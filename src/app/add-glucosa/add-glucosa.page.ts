@@ -49,8 +49,8 @@ export class AddGlucosaPage implements OnInit {
         resultado = inv['resultado'];
         if(resultado == "agregada"){
  
-         this.route.navigateByUrl('/inicio');
-         this.mensajeToast("Toma agregada correctamente.");
+          this.mensajeToast("Toma agregada correctamente.");
+          this.route.navigateByUrl('/inicio');
  
         }else{
           this.mensajeToast("A ocurrido un error intenta mas tarde, o verifica tu conexion a internet");
