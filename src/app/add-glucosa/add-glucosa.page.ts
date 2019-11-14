@@ -61,7 +61,6 @@ export class AddGlucosaPage implements OnInit {
         alert("Verifica que cuentes con internet");
       }
     );
-    //this.route.navigateByUrl("/inicio");
   }
 
   async alerta(mensaje) {
