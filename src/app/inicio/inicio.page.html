@@ -75,7 +75,7 @@
         <ion-icon name="menu" class="white"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title  class="white">
+    <ion-title class="white">
       Inicio
     </ion-title>
   </ion-toolbar>
@@ -91,30 +91,29 @@
           <img src="assets/add.png" class="gota circle">
         </div>
         <div class="blackText">Añadir medición de glucosa</div>
-
-        <div class="padding padding-top-10">
-          <div class="blackText bold">0 mg/dL</div>
-          <ion-label> Glucosa promedio</ion-label>
-        </div>
-        <div>
-            <div class="blackText bold">0 mg/dL</div>
+          <div class="padding padding-top-10">
+            <div class="blackText bold">{{promedio}} mg/dL</div>
+            <ion-label> Glucosa promedio</ion-label>
+          </div>
+          <div>
+            <div class="blackText bold">{{ultima}} mg/dL</div>
             <ion-label> Última lectura </ion-label>
-        </div> 
+          </div>
         <div class="menuItem" (click)="irA('/bitacora')">
           <img class="logoMenu" src="assets/forma.png">
           <ion-label class="blackText">Mi bitácora</ion-label>
         </div>
         <div class="menuItem" (click)="irA('/noticias')">
-            <img class="logoMenu" src="assets/noticias.png">
-            <ion-label class="blackText">Noticias</ion-label>
+          <img class="logoMenu" src="assets/noticias.png">
+          <ion-label class="blackText">Noticias</ion-label>
         </div>
         <div class="menuItem" (click)="irA('/graficas')">
-            <img class="logoMenu" src="assets/graficas.png">
-            <ion-label class="blackText">Gráficas</ion-label>
+          <img class="logoMenu" src="assets/graficas.png">
+          <ion-label class="blackText">Gráficas</ion-label>
         </div>
         <div class="menuItem" (click)="irA('/ejercicios')">
-            <img class="logoMenu" src="assets/ejercicio.png">
-            <ion-label class="blackText">Ejercicios</ion-label>
+          <img class="logoMenu" src="assets/ejercicio.png">
+          <ion-label class="blackText">Ejercicios</ion-label>
         </div>
       </div>
     </div>
