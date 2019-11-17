@@ -37,11 +37,11 @@ notas:string;
   guardar(){
     this.http.agregarP(this.peso,this.hora,this.fecha,this.notas,this.idUsuario).then(
       (inv) => {
-        console.log(inv);
+        //console.log(inv);
         var resultado;
 
         resultado = inv['resultado'];
-        if(resultado == "agregada"){
+        if(resultado == "insertado"){
  
           this.mensajeToast("Peso agregado correctamente.");
           this.route.navigateByUrl('/inicio');

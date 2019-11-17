@@ -62,6 +62,28 @@ export class HttpService {
          });
     });
   }
+  mostrarP(idUsuario:string){
+    var url = this.httpConexion + 'mostrarP/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
+  mostrarPEst(idUsuario:string){
+    var url = this.httpConexion + 'mostrarPEst/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
 
   //agregarM/{dosis}/{descripcion}/{hora}/{fecha}/{recordatorio}/{notas}/{idUsuario}
   agregarM(dosis:string,descripcion:string,hora:string,fecha:string,recordatorio:string,notas:string,idUsuario:string){

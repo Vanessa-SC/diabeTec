@@ -30,15 +30,15 @@
             <div class="horaCol colGris no-padding center">Hora</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngFor="let peso of pesos">
             <ion-col>
-              <div class="peCol">65 Kg</div>
+              <div class="peCol">{{peso.peso}}</div>
             </ion-col>
             <ion-col>
-              <div class="diaCol">24/08/2019</div>
+              <div class="diaCol">{{peso.fecha}}</div>
             </ion-col>
             <ion-col>
-              <div class="horaCol">1:09 am</div>
+              <div class="horaCol">{{peso.hora}}</div>
             </ion-col>
           </ion-row>
       </ion-grid>
@@ -59,13 +59,13 @@
         </ion-row>
         <ion-row>
             <ion-col>
-              <div class="Col acol center padding-left">65 Kg</div>
+              <div class="Col acol center padding-left">{{pesoMax}} Kg</div>
             </ion-col>
             <ion-col>
-              <div class="Col pcol center">65 Kg</div>
+              <div class="Col pcol center">{{pesoProm}} Kg</div>
             </ion-col>
             <ion-col>
-              <div class="Col bcol center">65 Kg</div>
+              <div class="Col bcol center">{{pesoMin}} Kg</div>
             </ion-col>
           </ion-row>
       </ion-grid>
