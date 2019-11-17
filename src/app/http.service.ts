@@ -75,6 +75,17 @@ export class HttpService {
          });
     });
   }
+  mostrarM(idUsuario:string){
+    var url = this.httpConexion + 'mostrarM/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
 
   //,sistolica,diastolica,pulso,fecha,hora,recordatorio,notas,,idUsuario
   agregarPA(sistolica:string,diastolica:string,pulso:string,fecha:string,hora:string,recordatorio:string,notas:string,idUsuario:string){

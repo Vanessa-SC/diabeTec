@@ -30,15 +30,16 @@
             <div class="horaCol colGris no-padding center">Hora</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngFor="let medicamento of medicamentos">
             <ion-col>
-              <div class="medCol">Glidin 4mg</div>
+              <div class="medCol">{{medicamento.descripcion}}
+              </div>
             </ion-col>
             <ion-col>
-              <div class="dosisCol">1 pastilla</div>
+              <div class="dosisCol"> {{medicamento.dosis}} </div>
             </ion-col>
             <ion-col>
-              <div class="horaCol">8:00 am <br> 8:00 pm</div>
+              <div class="horaCol"> {{medicamento.hora}} </div>
             </ion-col>
           </ion-row>
       </ion-grid>
