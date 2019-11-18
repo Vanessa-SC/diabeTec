@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { GraficasPage } from './graficas.page';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DatosGraficasService } from '../datos-graficas.service';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule
   ],
+  providers: [DatosGraficasService],
   declarations: [GraficasPage]
 })
 export class GraficasPageModule {}
