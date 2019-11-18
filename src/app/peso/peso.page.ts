@@ -35,6 +35,16 @@ export class PesoPage implements OnInit {
     });
   }
 
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.mostrarDatos(this.idUsuario);
+    this.mostrarDatosEst(this.idUsuario);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 500);
+  }
+
   ngOnInit() {
   }
 

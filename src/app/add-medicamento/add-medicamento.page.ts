@@ -23,11 +23,11 @@ idUsuario:string;
 unidades:string;
 medicamento:string;
 hora:string;
-//fecha:string;
+fecha:string;
 recordatorio:string;
-notas:string;
+notas:string ="ninguna";
 
-fecha: any ;
+//fecha: any ;
 
 
   ngOnInit() {

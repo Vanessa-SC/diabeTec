@@ -50,18 +50,7 @@ export class InicioPage implements OnInit {
         alert("Verifica que cuentes con internet");
       }
     );
-
   }
-
-
-
-
-
-
-
-
-
-
 
   openFirst() {
     console.log("click OpenFirst");
@@ -80,5 +69,14 @@ export class InicioPage implements OnInit {
     this.storage.set('contrasena',"");
     this.storage.set('idUsuario',"");
     this.route.navigateByUrl(vinculo);
+  }
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.mostrarDatos(this.idUsuario);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
   }
 }
