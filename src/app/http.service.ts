@@ -122,6 +122,18 @@ export class HttpService {
     });
   }
 
+  mostrarPA(idUsuario:string){
+    var url = this.httpConexion + 'mostrarPA/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
+
   glucosaAvgUlt(idUsuario:string){
     var url = this.httpConexion + 'glucosaAvgUlt/'+idUsuario;
     return new Promise((resolve, reject) => {

@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="new-background">
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="white">Presi&oacute;n arterial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center padding-top-10">
+    <div class="bold">Presi&oacute;n arterial</div>
+  </div>
+
+  <div class="padding-top-20">
+    <ion-item>
+      <ion-label class="fontt">Sist&oacute;lica (mmHg)</ion-label>
+      <ion-input [(ngModel)]="sistolica" class="right" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Diast&oacute;lica (mmHg)</ion-label>
+      <ion-input [(ngModel)]="diastolcia" class="right" ></ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Pulso (lpm)</ion-label>
+      <ion-input [(ngModel)]="pulso" class="right"></ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Fecha</ion-label>
+      <ion-datetime value="2019-10-14" display-format="DD MMMM, YYYY"
+        month-names="enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre"
+        day-short-names="dom,lun,mar,mier,jue,vie,sab" 
+        [(ngModel)]="fecha" >
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Hora</ion-label>
+      <ion-datetime [(ngModel)]="hora" displayFormat="h:mm a"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt">Recordatorio</ion-label>
+      <ion-select [(ngModel)]="recordatorio" value="recordatorio">
+        <ion-select-option value="1">Ninguno</ion-select-option>
+        <ion-select-option value="2">Diariamente</ion-select-option>
+        <ion-select-option value="3">Semanalmente</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label class="fontt" position="floating">Notas</ion-label>
+      <ion-textarea [(ngModel)]="notas"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="padding-top-30 center">
+    <ion-button class="new-background" (click)="guardarPresion()">Guardar</ion-button>
+  </div>
+</ion-content>
