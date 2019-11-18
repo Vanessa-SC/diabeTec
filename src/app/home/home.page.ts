@@ -33,7 +33,7 @@ export class HomePage {
         console.log(inv);
         var id=inv['idUsuario'];
         var pass=inv['contrasena'];
-
+        console.log(id);
           this.storage.set('contrasena',pass);
           this.storage.set('idUsuario', id);
           if(id != 0){

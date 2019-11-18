@@ -1,12 +1,15 @@
 <ion-header>
   <ion-toolbar class="new-background">
-      <ion-buttons slot="start"  class="white">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="white">Gráficas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div style="width: 500px; height: 500px;">
+    <h1>Realtime</h1>
+    <canvas id="realtime">{{ chartRealtime }}</canvas>
+  </div>
 </ion-content>
