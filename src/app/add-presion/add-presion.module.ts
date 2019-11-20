@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GraficasPage } from './graficas.page';
-
-import { HttpClientModule } from '@angular/common/http';
+import { AddPresionPage } from './add-presion.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: GraficasPage
+    component: AddPresionPage
   }
 ];
 
@@ -21,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    HttpClientModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [GraficasPage]
+  declarations: [AddPresionPage]
 })
-export class GraficasPageModule {}
+export class AddPresionPageModule {}

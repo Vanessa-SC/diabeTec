@@ -26,23 +26,22 @@
 
   <div class="padding-top-20">
 
-    <div class="padding">
+    <div class="padding padding-top-20" *ngFor="let glucosa of glucosas">
       <ion-grid class="colGris">
         <ion-grid class="colGris">
           <ion-grid class="colGris">
             <ion-grid class="colGris">
-              <div> <label> Miércoles 25</label></div>
+              <div><ion-icon name="calendar"></ion-icon><label> {{glucosa.fecha}}</label></div>
               <div>
-                <ion-icon name="md-time" style="zoom:1.5"></ion-icon>
-                <label> 9:46 a.m</label>
+                <ion-icon name="md-time"></ion-icon>
+                <label> {{glucosa.hora}}</label>
               </div>
               <ion-row>
                 <ion-col>
-                  <div class="Col pcol center">99.mg/dL</div>
+                  <div class="Col pcol center">{{glucosa.toma}}mg/dL</div>
                 </ion-col>
                 <ion-col>
-                  <div><label>Glicemia normal</label></div>
-                  <div><label>2 horas después del desayuno</label></div>
+                  <div><label>{{glucosa.nota}}</label></div>
                 </ion-col>
               </ion-row>
             </ion-grid>

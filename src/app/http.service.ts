@@ -37,6 +37,18 @@ export class HttpService {
     });
   }
 
+  perfil(idUsuario){
+    var url = this.httpConexion + 'perfil/'+idUsuario+'/';
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
+
   //agregarG/{glucosa}/{hora}/{fecha}/{periodo}/{actividad}/{medicacion}/{recordatorio}/{nota}
   agregarG(glucosa:string,hora:string,fecha:string,periodo:string,actividad:boolean,medicacion:boolean,recordatorio:string,nota:string,idUsuario:string){
     var url = this.httpConexion + 'agregarG/'+glucosa+'/'+hora+'/'+fecha+'/'+periodo+'/'+actividad+'/'+medicacion+'/'+recordatorio+'/'+nota+'/'+idUsuario;
@@ -45,6 +57,18 @@ export class HttpService {
         .subscribe(data => {
           resolve(data);
         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
+
+  mostrarG(idUsuario:string){
+    var url = this.httpConexion + 'mostrarG/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
            reject(err);    
          });
     });
@@ -75,6 +99,17 @@ export class HttpService {
   }
   mostrarPEst(idUsuario:string){
     var url = this.httpConexion + 'mostrarPEst/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
+  ultimoP(idUsuario:string){
+    var url = this.httpConexion + 'ultimoP/'+idUsuario;
     return new Promise((resolve, reject) => {
      this.http.get(url)
         .subscribe(data => {
@@ -117,6 +152,18 @@ export class HttpService {
         .subscribe(data => {
           resolve(data);
         }, (err) =>{
+           reject(err);    
+         });
+    });
+  }
+
+  mostrarPA(idUsuario:string){
+    var url = this.httpConexion + 'mostrarPA/'+idUsuario;
+    return new Promise((resolve, reject) => {
+     this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+         }, (err) =>{
            reject(err);    
          });
     });

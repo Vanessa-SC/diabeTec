@@ -1,5 +1,10 @@
-.new-background{
+.new-background {
   --background: rgb(199, 28, 57);
+  --background-hover: rgb(199, 28, 57);
+}
+.new-background-color {
+  --background: #A6ACAF;
+  --background-hover: #A6ACAF;
 }
 .white {
   color: #FFFCF2
@@ -47,6 +52,35 @@
 .no-padding-top {
   padding-top: 0px;
 }
+.padding-left-40 {
+  padding-left: 40px;
+}
 .fontt {
   font-size: 14px;
+}
+//columnas tabla
+.siCol{
+  min-width: 80px;
+  max-width: 40px;
+  padding: 5px;
+}
+.diCol{
+  min-width: 80px;
+  max-width: 40px;
+  padding: 5px;
+}
+.pulCol{
+  min-width: 80px;
+  max-width: 40px;
+  padding: 5px;
+}
+.feCol{
+  min-width: 80px;
+  max-width: 40px;
+  padding: 5px;
+}
+.colGris{
+  background-color: rgb(196, 196, 196);
+  border-radius: 30%;
+  padding: 5px;
 }

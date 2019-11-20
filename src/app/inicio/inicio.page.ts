@@ -29,7 +29,6 @@ export class InicioPage implements OnInit {
         console.log(this.idUsuario);
         this.mostrarDatos(this.idUsuario);
       });
-     // this.mostrarDatos(this.idUsuario);
     }
 
 
