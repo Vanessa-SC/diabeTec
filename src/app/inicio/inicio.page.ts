@@ -13,8 +13,8 @@ import { HttpService } from '../http.service';
 export class InicioPage implements OnInit {
 
   idUsuario:string;
-  ultima=null;
-  promedio=null;
+  ultima=0;
+  promedio=0;
 
   constructor(
       private menu: MenuController, 
@@ -26,6 +26,7 @@ export class InicioPage implements OnInit {
       storage.get("idUsuario").then((val) => {
         console.log('idUsuario', val);
         this.idUsuario = val;
+        console.log(this.idUsuario);
         this.mostrarDatos(this.idUsuario);
       });
      // this.mostrarDatos(this.idUsuario);
