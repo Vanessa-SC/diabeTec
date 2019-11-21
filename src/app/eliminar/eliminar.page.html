@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar class="new-background">
-      <ion-buttons slot="start"  class="white">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="white">Desactivar Cuenta</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,23 +10,19 @@
 <ion-content>
   <!-- Item Dividers in a List -->
   <ion-list>
-    
     <div class="mg-top-20 padding-20">
-      <ion-icon name="warning"></ion-icon> La desactivación de cuenta es definitiva.    
-    </div>      
-    
-         <div class="mg-top-20 padding-20 mg-b-20">Para desactivar tu cuenta, confirma tu correo electrónico:    
-          </div>
-          <ion-item class="mg-top-20 padding-5">
-              <ion-label position="floating">Correo electrónico</ion-label>
-              <ion-input></ion-input>
-            </ion-item>
-        
+      <ion-icon name="warning"></ion-icon> La desactivación de cuenta es definitiva.
+    </div>
+    <div class="mg-top-20 padding-20 mg-b-20">Para desactivar tu cuenta, confirma tu correo electrónico:
+    </div>
+    <ion-item class="mg-top-20 padding-5">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="correo" required></ion-input>
+    </ion-item>
   </ion-list>
 
-      <div class="padding-top-30 center">
-          <ion-button shape="round" expand="block" color="danger">Guardar cambios</ion-button>
-          <ion-button shape="round" expand="block" color="danger">Cancelar</ion-button>
-      </div>
+  <div class="padding-top-30 center">
+    <ion-button shape="round" expand="block" color="danger" (click)="confirmar()">Guardar cambios</ion-button>
+    <ion-button shape="round" expand="block" color="danger" routerLink="/inicio">Cancelar</ion-button>
+  </div>
 </ion-content>
-

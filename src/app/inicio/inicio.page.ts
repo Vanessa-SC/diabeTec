@@ -15,6 +15,7 @@ export class InicioPage implements OnInit {
   idUsuario:string;
   ultima=0;
   promedio=0;
+  
 
   constructor(
       private menu: MenuController, 
@@ -60,7 +61,6 @@ export class InicioPage implements OnInit {
   
   irA(vinculo:string){
     console.log(vinculo);
-
     this.route.navigateByUrl(vinculo);
   }
 
