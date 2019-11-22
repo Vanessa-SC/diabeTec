@@ -13,6 +13,7 @@ import { HttpService } from '../http.service';
 export class PresionPage implements OnInit {
   
   idUsuario:string;
+  toastController: any;
 
   constructor(
     private menu: MenuController, 
@@ -43,7 +44,41 @@ export class PresionPage implements OnInit {
         alert("Verifica que cuentes con internet");
       }
     );
+  }
+/* this.databaseObj.executeSql("DELETE FROM " + this.table_name + " WHERE pid = " + item.pid, [])
+      .then((res) => {
+        alert("Row Deleted!");
+        this.getRows();
+      })
+      .catch(e => {
+        alert("error " + JSON.stringify(e))
+      }); */
+  eliminar(presion){
+    this.http.eliminarPA(this.idUsuario,presion.idPresionArterial).then(
+      (inv) => {
+        console.log(inv);
+        var estado = inv['resultado'];
+        if (estado == "eliminado"){
+          this.alerta("Eliminado correctamente");
+          this.mostrarDatos(this.idUsuario);
+        } else {
+          this.alerta("No se pudo eliminar, intente mas tarde");
+        }
+      },
+      (error) => {
+        console.log("Error" + JSON.stringify(error));
+        alert("Verifica que cuentes con internet");
+      }
+    );
+  }
 
+  async alerta(mensaje) {
+    const toast = await this.toastController.create({
+      message: mensaje,
+      position: 'middle',
+      duration: 2000
+    });
+    toast.present();
   }
 
 }

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="new-background">
     <ion-buttons slot="start" class="white">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="inicio"></ion-back-button>
     </ion-buttons>
     <ion-title class="white">Presión arterial</ion-title>
   </ion-toolbar>
@@ -29,17 +29,23 @@
           <ion-col>
             <div class="pulCol colGris no-padding center">Pulso</div>
           </ion-col>
+          <ion-col></ion-col>
         </ion-row>
         <ion-row *ngFor="let presion of presiones">
             <ion-col>
-              <div class="siCol">{{presion.sistolica}}
+              <div class="siCol">{{presion.sistolica}} mmHg
               </div>
             </ion-col>
             <ion-col>
-              <div class="diCol"> {{presion.diastolica}} </div>
+              <div class="diCol"> {{presion.diastolica}} mmHg </div>
             </ion-col>
             <ion-col>
-              <div class="pulCol"> {{presion.pulso}} </div>
+              <div class="pulCol"> {{presion.pulso}} lpm</div>
+            </ion-col>
+            <ion-col>
+                <ion-button (click)="eliminar( presion )" size="small" color="danger">
+                    <ion-icon name="trash"></ion-icon>
+                </ion-button>
             </ion-col>
           </ion-row>
       </ion-grid>

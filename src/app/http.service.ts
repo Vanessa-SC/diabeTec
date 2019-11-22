@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
+  
 
   constructor(public http: HttpClient) { }
 
@@ -183,6 +184,18 @@ export class HttpService {
 
   mostrarPA(idUsuario: string) {
     var url = this.httpConexion + 'mostrarPA/' + idUsuario;
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  eliminarPA(idUsuario: string, idPresionArterial: any) {
+    var url = this.httpConexion + 'eliminarPA/' + idUsuario+'/'+idPresionArterial;
     return new Promise((resolve, reject) => {
       this.http.get(url)
         .subscribe(data => {
