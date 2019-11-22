@@ -16,7 +16,12 @@ export class NoticiasPage implements OnInit {
    }
  
 
-  ngOnInit() {
+   ngOnInit() {
+     this.mostrarNoticias();
+  }
+  
+  mostrarNoticias(){
+    
     this.newsService
       .getData('everything?q=diabetes&language=es&sortBy=publishedAt')
       .subscribe(data=> {
@@ -26,6 +31,15 @@ export class NoticiasPage implements OnInit {
       (error) =>{
         console.error(error);
       })
+  }
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.mostrarNoticias();
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
   }
  
 

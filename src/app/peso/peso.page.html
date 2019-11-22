@@ -1,16 +1,16 @@
 <ion-header>
   <ion-toolbar class="new-background">
-      <ion-buttons slot="start"  class="white">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-buttons slot="start" class="white">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
     <ion-title class="white">Peso</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
   <div class="center padding-top-10">
     <ion-item routerLink="/add-peso">
       <div class="bold padding-left-40">Control de mi peso</div>
@@ -32,18 +32,24 @@
           <ion-col>
             <div class="horaCol colGris no-padding center">Hora</div>
           </ion-col>
+          <ion-col></ion-col>
         </ion-row>
         <ion-row *ngFor="let peso of pesos">
-            <ion-col>
-              <div class="peCol">{{peso.peso}} kg</div>
-            </ion-col>
-            <ion-col>
-              <div class="diaCol">{{peso.fecha}}</div>
-            </ion-col>
-            <ion-col>
-              <div class="horaCol">{{peso.hora}}</div>
-            </ion-col>
-          </ion-row>
+          <ion-col>
+            <div class="peCol">{{peso.peso}} kg</div>
+          </ion-col>
+          <ion-col>
+            <div class="diaCol">{{peso.fecha}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="horaCol">{{peso.hora}}</div>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="eliminar( peso )" size="small" color="danger">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
       </ion-grid>
     </div>
 
@@ -61,16 +67,16 @@
           </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col>
-              <div class="Col acol center padding-left">{{pesoMax}} Kg</div>
-            </ion-col>
-            <ion-col>
-              <div class="Col pcol center">{{pesoProm}} Kg</div>
-            </ion-col>
-            <ion-col>
-              <div class="Col bcol center">{{pesoMin}} Kg</div>
-            </ion-col>
-          </ion-row>
+          <ion-col>
+            <div class="Col acol center padding-left">{{pesoMax}} Kg</div>
+          </ion-col>
+          <ion-col>
+            <div class="Col pcol center">{{pesoProm}} Kg</div>
+          </ion-col>
+          <ion-col>
+            <div class="Col bcol center">{{pesoMin}} Kg</div>
+          </ion-col>
+        </ion-row>
       </ion-grid>
     </div>
   </div>

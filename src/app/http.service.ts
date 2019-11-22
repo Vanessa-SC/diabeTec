@@ -87,6 +87,18 @@ export class HttpService {
     });
   }
 
+  eliminarG(idUsuario: string, idGlucosa: any) {
+    var url = this.httpConexion + 'eliminarG/' + idUsuario+'/'+idGlucosa;
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   //agregarP/{peso}/{hora}/{fecha}/{notas}/{idUsuario}
   agregarP(peso: string, hora: string, fecha: string, notas: string, idUsuario: string) {
     var url = this.httpConexion + 'agregarP/' + peso + '/' + hora + '/' + fecha + '/' + notas + '/' + idUsuario;
@@ -133,6 +145,18 @@ export class HttpService {
     });
   }
 
+  eliminarP(idUsuario: string, idPeso: any) {
+    var url = this.httpConexion + 'eliminarP/' + idUsuario+'/'+idPeso;
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   //agregarM/{dosis}/{descripcion}/{hora}/{fecha}/{recordatorio}/{notas}/{idUsuario}
   agregarM(dosis: string, descripcion: string, hora: string, fecha: string, recordatorio: string, notas: string, idUsuario: string) {
     var url = this.httpConexion + 'agregarM/' + dosis + '/' + descripcion + '/' + hora + '/' + fecha + '/' + recordatorio + '/' + notas + '/' + idUsuario;
@@ -157,15 +181,15 @@ export class HttpService {
     });
   }
 
-  mostrarU(idUsuario:string){
-    var url = this.httpConexion + 'mostrarU/'+idUsuario;
+  eliminarM(idUsuario: string, idMedicamento: any) {
+    var url = this.httpConexion + 'eliminarM/' + idUsuario+'/'+idMedicamento;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 

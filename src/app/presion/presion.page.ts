@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/Storage';
 import { HttpService } from '../http.service';
 
@@ -13,14 +13,15 @@ import { HttpService } from '../http.service';
 export class PresionPage implements OnInit {
   
   idUsuario:string;
-  toastController: any;
+  
 
   constructor(
     private menu: MenuController, 
     public route:Router, 
     public activatedRoute:ActivatedRoute, 
     private storage:Storage,
-    private http:HttpService
+    private http:HttpService,
+    private toastController: ToastController
   ) { 
     storage.get("idUsuario").then((val) => {
       console.log('idUsuario', val);
@@ -79,6 +80,15 @@ export class PresionPage implements OnInit {
       duration: 2000
     });
     toast.present();
+  }
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.mostrarDatos(this.idUsuario);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
   }
 
 }

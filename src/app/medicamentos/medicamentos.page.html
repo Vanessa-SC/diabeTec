@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar class="new-background">
     <ion-buttons slot="start" class="white">
-      <ion-back-button></ion-back-button>
+      <ion-back-button  defaultHref="inicio"></ion-back-button>
     </ion-buttons>
     <ion-title class="white">Medicamentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
   <div class="center padding-top-10">
     <ion-item routerLink="/add-medicamento">
       <div class="bold padding-left-40">Medicamentos</div>
@@ -29,6 +32,7 @@
           <ion-col>
             <div class="horaCol colGris no-padding center">Hora</div>
           </ion-col>
+          <ion-col></ion-col>
         </ion-row>
         <ion-row *ngFor="let medicamento of medicamentos">
             <ion-col>
@@ -41,6 +45,9 @@
             <ion-col>
               <div class="horaCol"> {{medicamento.hora}} </div>
             </ion-col>
+            <ion-button (click)="eliminar( medicamento )" size="small" color="danger">
+                <ion-icon name="trash"></ion-icon>
+            </ion-button>
           </ion-row>
       </ion-grid>
     </div>
