@@ -7,117 +7,152 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
 
-  constructor(public http:HttpClient) { }
+  constructor(public http: HttpClient) { }
 
   httpConexion = "http://127.0.0.1:8000/";
 
 
 
-  login( correo:string, contra:string){
-    var url = this.httpConexion + 'login/'+correo+'/'+contra;
+  login(correo: string, contra: string) {
+    var url = this.httpConexion + 'login/' + correo + '/' + contra;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
-  registro(nombre:string,telefono:string,email:string,contra:string,sexo:string,tipoDiab:string,fechaNac:string){
-    var url = this.httpConexion + 'registro/'+nombre+'/'+telefono+'/'+email+'/'+contra+'/'+sexo+'/'+tipoDiab+'/'+fechaNac;
+  registro(nombre: string, telefono: string, email: string, contra: string, sexo: string, tipoDiab: string, fechaNac: string) {
+    var url = this.httpConexion + 'registro/' + nombre + '/' + telefono + '/' + email + '/' + contra + '/' + sexo + '/' + tipoDiab + '/' + fechaNac;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-        }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  perfil(idUsuario) {
+    var url = this.httpConexion + 'perfil/' + idUsuario + '/';
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  desactivar(email:string) {
+    var url = this.httpConexion + 'desactivar/' + email + '/';
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
   //agregarG/{glucosa}/{hora}/{fecha}/{periodo}/{actividad}/{medicacion}/{recordatorio}/{nota}
-  agregarG(glucosa:string,hora:string,fecha:string,periodo:string,actividad:boolean,medicacion:boolean,recordatorio:string,nota:string,idUsuario:string){
-    var url = this.httpConexion + 'agregarG/'+glucosa+'/'+hora+'/'+fecha+'/'+periodo+'/'+actividad+'/'+medicacion+'/'+recordatorio+'/'+nota+'/'+idUsuario;
+  agregarG(glucosa: string, hora: string, fecha: string, periodo: string, actividad: boolean, medicacion: boolean, recordatorio: string, nota: string, idUsuario: string) {
+    var url = this.httpConexion + 'agregarG/' + glucosa + '/' + hora + '/' + fecha + '/' + periodo + '/' + actividad + '/' + medicacion + '/' + recordatorio + '/' + nota + '/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-        }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
-  mostrarG(idUsuario:string){
-    var url = this.httpConexion + 'mostrarG/'+idUsuario;
+  mostrarG(idUsuario: string) {
+    var url = this.httpConexion + 'mostrarG/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
   //agregarP/{peso}/{hora}/{fecha}/{notas}/{idUsuario}
-  agregarP(peso:string,hora:string,fecha:string,notas:string,idUsuario:string){
-    var url = this.httpConexion + 'agregarP/'+peso+'/'+hora+'/'+fecha+'/'+notas+'/'+idUsuario;
+  agregarP(peso: string, hora: string, fecha: string, notas: string, idUsuario: string) {
+    var url = this.httpConexion + 'agregarP/' + peso + '/' + hora + '/' + fecha + '/' + notas + '/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-        }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
-  mostrarP(idUsuario:string){
-    var url = this.httpConexion + 'mostrarP/'+idUsuario;
+  mostrarP(idUsuario: string) {
+    var url = this.httpConexion + 'mostrarP/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
-  mostrarPEst(idUsuario:string){
-    var url = this.httpConexion + 'mostrarPEst/'+idUsuario;
+  mostrarPEst(idUsuario: string) {
+    var url = this.httpConexion + 'mostrarPEst/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+  ultimoP(idUsuario: string) {
+    var url = this.httpConexion + 'ultimoP/' + idUsuario;
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
   //agregarM/{dosis}/{descripcion}/{hora}/{fecha}/{recordatorio}/{notas}/{idUsuario}
-  agregarM(dosis:string,descripcion:string,hora:string,fecha:string,recordatorio:string,notas:string,idUsuario:string){
-    var url = this.httpConexion + 'agregarM/'+dosis+'/'+descripcion+'/'+hora+'/'+fecha+'/'+recordatorio+'/'+notas+'/'+idUsuario;
+  agregarM(dosis: string, descripcion: string, hora: string, fecha: string, recordatorio: string, notas: string, idUsuario: string) {
+    var url = this.httpConexion + 'agregarM/' + dosis + '/' + descripcion + '/' + hora + '/' + fecha + '/' + recordatorio + '/' + notas + '/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-        }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
-  mostrarM(idUsuario:string){
-    var url = this.httpConexion + 'mostrarM/'+idUsuario;
+  mostrarM(idUsuario: string) {
+    var url = this.httpConexion + 'mostrarM/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
@@ -134,54 +169,54 @@ export class HttpService {
   }
 
   //,sistolica,diastolica,pulso,fecha,hora,recordatorio,notas,,idUsuario
-  agregarPA(sistolica:string,diastolica:string,pulso:string,fecha:string,hora:string,recordatorio:string,notas:string,idUsuario:string){
-    var url = this.httpConexion + 'agregarPA/'+sistolica+'/'+diastolica+'/'+pulso+'/'+fecha+'/'+hora+'/'+recordatorio+'/'+notas+'/'+idUsuario;
+  agregarPA(sistolica: string, diastolica: string, pulso: string, fecha: string, hora: string, recordatorio: string, notas: string, idUsuario: string) {
+    var url = this.httpConexion + 'agregarPA/' + sistolica + '/' + diastolica + '/' + pulso + '/' + fecha + '/' + hora + '/' + recordatorio + '/' + notas + '/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-        }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
-  mostrarPA(idUsuario:string){
-    var url = this.httpConexion + 'mostrarPA/'+idUsuario;
+  mostrarPA(idUsuario: string) {
+    var url = this.httpConexion + 'mostrarPA/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
-  glucosaAvgUlt(idUsuario:string){
-    var url = this.httpConexion + 'glucosaAvgUlt/'+idUsuario;
+  glucosaAvgUlt(idUsuario: string) {
+    var url = this.httpConexion + 'glucosaAvgUlt/' + idUsuario;
     return new Promise((resolve, reject) => {
-     this.http.get(url)
+      this.http.get(url)
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 
 
-  traerNoticias(){
+  traerNoticias() {
 
     return new Promise((resolve, reject) => {
-     // var url = "https://randomuser.me/api/?results=25";
-     this.http.get("assets/data/noticias.json")
+      // var url = "https://randomuser.me/api/?results=25";
+      this.http.get("assets/data/noticias.json")
         .subscribe(data => {
           resolve(data);
-         }, (err) =>{
-           reject(err);    
-         });
+        }, (err) => {
+          reject(err);
+        });
     });
-   }
+  }
 
 }

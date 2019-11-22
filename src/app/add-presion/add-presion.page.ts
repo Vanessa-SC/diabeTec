@@ -31,6 +31,7 @@ export class AddPresionPage implements OnInit {
   }
 
   guardarPresion(){
+    console.log(this.idUsuario+', '+this.sistolica+', '+this.diastolica+', '+this.pulso+', '+this.fecha+', '+this.hora+', '+this.recordatorio+', '+this.notas);
     if(this.sistolica != undefined && this.diastolica != undefined && this.pulso != undefined && this.fecha != undefined && this.hora != undefined){
       this.guardar();
     } else {

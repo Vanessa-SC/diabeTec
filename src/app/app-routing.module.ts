@@ -21,7 +21,9 @@ const routes: Routes = [
   { path: 'receta', loadChildren: './receta/receta.module#RecetaPageModule' },
   { path: 'add-peso', loadChildren: './add-peso/add-peso.module#AddPesoPageModule' },
   { path: 'add-recordatorio', loadChildren: './add-recordatorio/add-recordatorio.module#AddRecordatorioPageModule' },
-  { path: 'add-glucosa', loadChildren: './add-glucosa/add-glucosa.module#AddGlucosaPageModule' },  { path: 'add-presion', loadChildren: './add-presion/add-presion.module#AddPresionPageModule' },
+  { path: 'add-glucosa', loadChildren: './add-glucosa/add-glucosa.module#AddGlucosaPageModule' },
+  { path: 'eliminar', loadChildren: './eliminar/eliminar.module#EliminarPageModule' },
+  { path: 'add-presion', loadChildren: './add-presion/add-presion.module#AddPresionPageModule' },
 
 
 ];

@@ -33,9 +33,11 @@ export class HomePage {
         console.log(inv);
         var id=inv['idUsuario'];
         var pass=inv['contrasena'];
-        console.log(id);
+        var email=inv['email'];
+        console.log(id,pass);
           this.storage.set('contrasena',pass);
           this.storage.set('idUsuario', id);
+          this.storage.set('email', email);
           if(id != 0){
             if(id == -2){
               this.mensaje();
