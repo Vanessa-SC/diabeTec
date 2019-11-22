@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'add-recordatorio', loadChildren: './add-recordatorio/add-recordatorio.module#AddRecordatorioPageModule' },
   { path: 'add-glucosa', loadChildren: './add-glucosa/add-glucosa.module#AddGlucosaPageModule' },
   { path: 'eliminar', loadChildren: './eliminar/eliminar.module#EliminarPageModule' },
-  { path: 'add-presion', loadChildren: './add-presion/add-presion.module#AddPresionPageModule' },
+  { path: 'add-presion', loadChildren: './add-presion/add-presion.module#AddPresionPageModule' },  { path: 'view-peso', loadChildren: './view-peso/view-peso.module#ViewPesoPageModule' },
+
 
 
 ];

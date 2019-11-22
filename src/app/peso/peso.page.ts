@@ -13,6 +13,7 @@ import { HttpService } from '../http.service';
 export class PesoPage implements OnInit {
 
   idUsuario:string;
+  idPeso:string;
   peso:string;
   fecha:string;
   hora:string;
@@ -29,7 +30,9 @@ export class PesoPage implements OnInit {
   ) { 
     storage.get("idUsuario").then((val) => {
       console.log('idUsuario', val);
+      console.log('idPeso', val);
       this.idUsuario = val;
+      this.idPeso = val;
       this.mostrarDatos(this.idUsuario);
       this.mostrarDatosEst(this.idUsuario);
     });
