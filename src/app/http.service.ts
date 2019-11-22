@@ -50,6 +50,18 @@ export class HttpService {
     });
   }
 
+  pesos(idPeso) {
+    var url = this.httpConexion + 'peso/' + idPeso + '/';
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   desactivar(email:string) {
     var url = this.httpConexion + 'desactivar/' + email + '/';
     return new Promise((resolve, reject) => {
