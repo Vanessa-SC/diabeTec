@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
   
-
   constructor(public http: HttpClient) { }
 
   httpConexion = "http://127.0.0.1:8000/";
@@ -74,6 +73,20 @@ export class HttpService {
     });
   }
 
+//updateU/{nombre}/{telefono}/{sexo}/{tipoDiab}/{estatura}/{idUsuario}
+
+  updateU(nombreM: string, telefonoM: string, estaturaM: string,idUsuario:string) {
+    var url = this.httpConexion + 'updateU/' + nombreM + '/' + telefonoM + '/' + estaturaM + '/' + idUsuario + '/';
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   //agregarG/{glucosa}/{hora}/{fecha}/{periodo}/{actividad}/{medicacion}/{recordatorio}/{nota}
   agregarG(glucosa: string, hora: string, fecha: string, periodo: string, actividad: boolean, medicacion: boolean, recordatorio: string, nota: string, idUsuario: string) {
     var url = this.httpConexion + 'agregarG/' + glucosa + '/' + hora + '/' + fecha + '/' + periodo + '/' + actividad + '/' + medicacion + '/' + recordatorio + '/' + nota + '/' + idUsuario;
@@ -113,7 +126,7 @@ export class HttpService {
 
   //agregarP/{peso}/{hora}/{fecha}/{notas}/{idUsuario}
   agregarP(peso: string, hora: string, fecha: string, notas: string, idUsuario: string) {
-    var url = this.httpConexion + 'agregarP/' + peso + '/' + hora + '/' + fecha + '/' + notas + '/' + idUsuario;
+    var url = this.httpConexion + 'agregarP/' + peso + '/' + hora + '/' + fecha + '/' + notas + '/' + idUsuario + '/';
     return new Promise((resolve, reject) => {
       this.http.get(url)
         .subscribe(data => {

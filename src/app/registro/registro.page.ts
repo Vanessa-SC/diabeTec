@@ -75,6 +75,5 @@ terminosCheck:string;
       duration: 2000
     });
     toast.present();
-
   }
 }
