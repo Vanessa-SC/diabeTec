@@ -1,18 +1,21 @@
 <ion-header>
   <ion-toolbar class="new-background">
     <ion-buttons slot="start" class="white">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="inicio"></ion-back-button>
     </ion-buttons>
     <ion-title class="white">Gráficas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="card">
-    <canvas id="realtime">{{ chartRealtime }}</canvas>
-    <div class="card-content">
-      <h3>Realtime</h3>
-      <p>Esta gráfica muestra información en tiempo real</p>
-    </div>
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+       Registro de glucosa
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
