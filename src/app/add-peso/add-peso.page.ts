@@ -44,7 +44,7 @@ notas:string;
         if(resultado == "insertado"){
  
           this.mensajeToast("Peso agregado correctamente.");
-          this.route.navigateByUrl('/inicio');
+          this.route.navigateByUrl('/peso');
  
         }else{
           this.mensajeToast("A ocurrido un error intenta mas tarde, o verifica tu conexion a internet");

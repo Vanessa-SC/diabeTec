@@ -49,7 +49,7 @@ export class AddPresionPage implements OnInit {
         if(resultado == "insertado"){
  
           this.mensajeToast("Presion arterial registrada correctamente.");
-          this.route.navigateByUrl('/inicio');
+          this.route.navigateByUrl('/presion');
  
         }else{
           this.mensajeToast("A ocurrido un error intenta mas tarde, o verifica tu conexion a internet");

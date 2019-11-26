@@ -94,6 +94,7 @@ export class PesoPage implements OnInit {
         if (estado == "eliminado"){
           this.alerta("Eliminado correctamente");
           this.mostrarDatos(this.idUsuario);
+          this.mostrarDatosEst(this.idUsuario);
         } else {
           this.alerta("No se pudo eliminar, intente mas tarde");
         }
@@ -113,6 +114,8 @@ export class PesoPage implements OnInit {
         if (estado == "actualizado"){
           this.alerta("Actualizado con éxito.");
           this.mostrarDatos(this.idUsuario);
+          this.mostrarDatosEst(this.idUsuario);
+
         } else {
           this.alerta("No se pudo eliminar, intente mas tarde");
         }

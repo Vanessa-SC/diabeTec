@@ -44,7 +44,7 @@ notas:string ="ninguna";
         if(resultado == "insertado"){
  
           this.mensajeToast("Toma agregada correctamente.");
-          this.route.navigateByUrl('/inicio');
+          this.route.navigateByUrl('/medicamentos');
  
         }else{
           this.mensajeToast("A ocurrido un error intenta mas tarde, o verifica tu conexion a internet");
