@@ -124,6 +124,18 @@ export class HttpService {
     });
   }
 
+  updateG(tomaG: string, horaG: string, fechaG: string,notaG:string, idUsuario:string, idGlucosa:string) {
+    var url = this.httpConexion + 'updateG/' + tomaG + '/' + horaG + '/' + fechaG + '/' + notaG + '/' + idUsuario + '/' + idGlucosa + '/';
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   //agregarP/{peso}/{hora}/{fecha}/{notas}/{idUsuario}
   agregarP(peso: string, hora: string, fecha: string, notas: string, idUsuario: string) {
     var url = this.httpConexion + 'agregarP/' + peso + '/' + hora + '/' + fecha + '/' + notas + '/' + idUsuario + '/';

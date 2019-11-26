@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { MenuController, ToastController } from '@ionic/angular';
+import { MenuController, ToastController, AlertController } from '@ionic/angular';
 import { Storage } from '@ionic/Storage';
 import { HttpService } from '../http.service';
 
@@ -13,6 +13,8 @@ import { HttpService } from '../http.service';
 export class BitacoraPage implements OnInit {
 
   idUsuario:string;
+  idGlucosa:string;
+  glucosa:string;
 
   constructor(
     private menu: MenuController, 
@@ -20,11 +22,14 @@ export class BitacoraPage implements OnInit {
     public activatedRoute:ActivatedRoute, 
     private storage:Storage,
     private http:HttpService,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private alertCtrl: AlertController
   ) { 
     storage.get("idUsuario").then((val) => {
       console.log('idUsuario', val);
+      console.log('idGlucosa', val);
       this.idUsuario = val;
+      this.idGlucosa = val;
       this.mostrarDatos(this.idUsuario);
     });
   }
@@ -66,6 +71,35 @@ export class BitacoraPage implements OnInit {
     );
   }
 
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.mostrarDatos(this.idUsuario);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
+  }
+
+  modificar(tomaG,horaG,fechaG,notaG,idGlucosa){
+    this.http.updateG(tomaG,horaG,fechaG,notaG,this.idUsuario,idGlucosa).then(
+      (inv) => {
+        console.log(inv);
+        var estado = inv['resultado'];
+        if (estado == "actualizado"){
+          this.alerta("Actualizado con éxito.");
+          this.mostrarDatos(this.idUsuario);
+
+        } else {
+          this.alerta("No se pudo eliminar, intente mas tarde");
+        }
+      },
+      (error) => {
+        console.log("Error" + JSON.stringify(error));
+        alert("Verifica que cuentes con internet");
+      }
+    );
+  }
+
   async alerta(mensaje) {
     const toast = await this.toastController.create({
       message: mensaje,
@@ -74,14 +108,56 @@ export class BitacoraPage implements OnInit {
     });
     toast.present();
   }
+  
 
-  doRefresh(event) {
-    console.log('Begin async operation');
-    this.mostrarDatos(this.idUsuario);
-    setTimeout(() => {
-      console.log('Async operation has ended');
-      event.target.complete();
-    }, 1000);
+  async actualizar( glucosa ) {
+    let alert = this.alertCtrl.create({
+      header: 'Actualizar',
+      inputs: [
+        {
+          label: 'toma',
+          name: 'toma',
+          placeholder: 'Glucosa',
+          value: glucosa.toma,
+          type: 'text'
+        },
+        {
+          label: 'fecha',
+          name: 'fecha',
+          value: glucosa.fecha,
+          type: 'date'
+        },
+        {
+          label: 'hora',
+          name: 'hora',
+          value: glucosa.hora,
+          type: 'time'
+        },
+        {
+          label: 'nota',
+          name: 'nota',
+          placeholder: 'Nota',
+          value: glucosa.nota,
+          type: 'text'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancelar');
+          }
+        },
+        {
+          text: 'Guardar',
+          handler: data => {
+            this.modificar(data.toma,data.hora,data.fecha,data.nota,glucosa.idGlucosa);
+          }
+        }
+      ]
+    });
+    (await alert).present();
   }
 }
 
