@@ -32,7 +32,7 @@
           <ion-col>
             <div class="pulCol colGris no-padding center">Pulso</div>
           </ion-col>
-          <ion-col></ion-col>
+          
         </ion-row>
         <ion-row *ngFor="let presion of presiones">
             <ion-col>
@@ -44,11 +44,14 @@
             </ion-col>
             <ion-col>
               <div class="pulCol"> {{presion.pulso}} lpm</div>
-            </ion-col>
-            <ion-col>
+              <ion-row>
                 <ion-button (click)="eliminar( presion )" size="small" color="danger">
-                    <ion-icon name="trash"></ion-icon>
+                  <ion-icon name="trash"></ion-icon>
                 </ion-button>
+                <ion-button (click)="actualizar( presion )" size="small" color="primary">
+                  <ion-icon name="create"></ion-icon>
+                </ion-button>
+              </ion-row>  
             </ion-col>
           </ion-row>
       </ion-grid>

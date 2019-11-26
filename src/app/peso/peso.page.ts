@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { MenuController, ToastController } from '@ionic/angular';
+import { MenuController, ToastController, AlertController } from '@ionic/angular';
 import { Storage } from '@ionic/Storage';
 import { HttpService } from '../http.service';
 
@@ -21,13 +21,18 @@ export class PesoPage implements OnInit {
   pesoProm:string;
   pesoMin:string;
 
+  pesoMod:string;
+  horaMod:string;
+  fechaMod:string;
+
   constructor(
     private menu: MenuController, 
     public route:Router, 
     public activatedRoute:ActivatedRoute, 
     private storage:Storage,
     private http:HttpService,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private alertCtrl: AlertController
   ) { 
     storage.get("idUsuario").then((val) => {
       console.log('idUsuario', val);
@@ -100,6 +105,25 @@ export class PesoPage implements OnInit {
     );
   }
 
+  modificar(pesoMod,horaMod,fechaMod,idPeso){
+    this.http.updateP(pesoMod,horaMod,fechaMod,this.idUsuario,idPeso).then(
+      (inv) => {
+        console.log(inv);
+        var estado = inv['resultado'];
+        if (estado == "actualizado"){
+          this.alerta("Actualizado con éxito.");
+          this.mostrarDatos(this.idUsuario);
+        } else {
+          this.alerta("No se pudo eliminar, intente mas tarde");
+        }
+      },
+      (error) => {
+        console.log("Error" + JSON.stringify(error));
+        alert("Verifica que cuentes con internet");
+      }
+    );
+  }
+
   async alerta(mensaje) {
     const toast = await this.toastController.create({
       message: mensaje,
@@ -109,5 +133,48 @@ export class PesoPage implements OnInit {
     toast.present();
   }
   
+
+  async actualizar( Peso ) {
+    let alert = this.alertCtrl.create({
+      header: 'Actualizar',
+      inputs: [
+        {
+          label: 'peso',
+          name: 'peso',
+          placeholder: 'Peso',
+          value: Peso.peso,
+          type: 'text'
+        },
+        {
+          label: 'fecha',
+          name: 'fecha',
+          value: Peso.fecha,
+          type: 'date'
+        },
+        {
+          label: 'hora',
+          name: 'hora',
+          value: Peso.hora,
+          type: 'time'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancelar');
+          }
+        },
+        {
+          text: 'Guardar',
+          handler: data => {
+            this.modificar(data.peso,data.hora,data.fecha,Peso.idPeso);
+          }
+        }
+      ]
+    });
+    (await alert).present();
+  }
 
 }

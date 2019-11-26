@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
   
+  
 
   constructor(public http: HttpClient) { }
 
@@ -169,6 +170,18 @@ export class HttpService {
     });
   }
 
+  updateP(pesoMod: string, horaMod: string, fechaMod: string, idUsuario: string, idPeso: string) {
+    var url = this.httpConexion + 'updateP/' + pesoMod+'/'+horaMod+'/'+fechaMod+'/'+idUsuario+'/'+idPeso+'/';
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   //agregarM/{dosis}/{descripcion}/{hora}/{fecha}/{recordatorio}/{notas}/{idUsuario}
   agregarM(dosis: string, descripcion: string, hora: string, fecha: string, recordatorio: string, notas: string, idUsuario: string) {
     var url = this.httpConexion + 'agregarM/' + dosis + '/' + descripcion + '/' + hora + '/' + fecha + '/' + recordatorio + '/' + notas + '/' + idUsuario;
@@ -195,6 +208,18 @@ export class HttpService {
 
   eliminarM(idUsuario: string, idMedicamento: any) {
     var url = this.httpConexion + 'eliminarM/' + idUsuario+'/'+idMedicamento;
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  updateM(descripcion: string, dosis: string, hora: string, idUsuario: string, idMedicamento: string) {
+    var url = this.httpConexion + 'updateM/' + descripcion+'/'+dosis+'/'+hora+'/'+idUsuario+'/'+idMedicamento+'/';
     return new Promise((resolve, reject) => {
       this.http.get(url)
         .subscribe(data => {
@@ -244,6 +269,18 @@ export class HttpService {
 
   glucosaAvgUlt(idUsuario: string) {
     var url = this.httpConexion + 'glucosaAvgUlt/' + idUsuario;
+    return new Promise((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(data => {
+          resolve(data);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  updatePA(sistolica: string, diastolica: string, pulso: string,fecha:string,hora:string, idUsuario: string, idPA: string) {
+    var url = this.httpConexion + 'updatePA/' + sistolica+'/'+diastolica+'/'+pulso+'/'+fecha+'/'+hora+'/'+idUsuario+'/'+idPA+'/';
     return new Promise((resolve, reject) => {
       this.http.get(url)
         .subscribe(data => {

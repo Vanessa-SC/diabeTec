@@ -32,7 +32,7 @@
           <ion-col>
             <div class="horaCol colGris no-padding center">Hora</div>
           </ion-col>
-          <ion-col></ion-col>
+          
         </ion-row>
         <ion-row *ngFor="let peso of pesos">
           <ion-col>
@@ -43,11 +43,14 @@
           </ion-col>
           <ion-col>
             <div class="horaCol">{{peso.hora}}</div>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="eliminar( peso )" size="small" color="danger">
-              <ion-icon name="trash"></ion-icon>
-            </ion-button>
+            <ion-row>
+              <ion-button (click)="eliminar( peso )" size="small" color="danger">
+                <ion-icon name="trash"></ion-icon>
+              </ion-button>
+              <ion-button (click)="actualizar( peso )" size="small" color="primary">
+                <ion-icon name="create"></ion-icon>
+              </ion-button>
+            </ion-row>
           </ion-col>
         </ion-row>
       </ion-grid>
